@@ -2,11 +2,11 @@
 
 // Placeholder
 .fix-cookie__placehoder {
-    width: $placeholder__width;
-    max-width: $placeholder__max-width;
-    border: $placeholder__border;
-    margin: $placeholder__margin;
-    background-color: $placeholder__background-color;
+    width: $cookie__placeholder__width;
+    max-width: $cookie__placeholder__max-width;
+    border: $cookie__placeholder__border;
+    margin: $cookie__placeholder__margin;
+    background-color: $cookie__placeholder__background-color;
 }
 
 // Container - Component - Elements
@@ -28,7 +28,7 @@
     }
 
     &-description {
-        color: $color-text__normal;
+        color: $cookie__color-text__normal;
     }
 
     &-button {

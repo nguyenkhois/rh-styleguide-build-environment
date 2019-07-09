@@ -1,16 +1,16 @@
 @import '../../styles/common';
 
 // Color
-$color-main__dark: #868686;
-$color-main__light: #ececec;
-$color-text__normal: #5c5c5c;
+$sample__color-main__dark: #868686;
+$sample__color-main__light: #ececec;
+$sample__color-text__normal: #5c5c5c;
 
 // Placeholder
-$placeholder__width: 100%;
-$placeholder__max-width: $page-content__max-width;
-$placeholder__border: initial;
-$placeholder__margin: auto;
-$placeholder__background-color: $color-main__light;
+$sample__placeholder__width: 100%;
+$sample__placeholder__max-width: $page-content__max-width;
+$sample__placeholder__border: initial;
+$sample__placeholder__margin: auto;
+$sample__placeholder__background-color: $sample__color-main__light;
 
 // Component's setting
 $sample__border: 0.05em solid #f1a1a1;

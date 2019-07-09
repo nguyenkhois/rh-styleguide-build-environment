@@ -2,11 +2,11 @@
 
 // Placeholder
 .sample__placehoder {
-    width: $placeholder__width;
-    max-width: $placeholder__max-width;
-    border: $placeholder__border;
-    margin: $placeholder__margin;
-    background-color: $placeholder__background-color;
+    width: $sample__placeholder__width;
+    max-width: $sample__placeholder__max-width;
+    border: $sample__placeholder__border;
+    margin: $sample__placeholder__margin;
+    background-color: $sample__placeholder__background-color;
 }
 
 // Container - Component
@@ -19,9 +19,9 @@
 
 // Elements
 .sample__description {
-    color: $color-text__normal;
+    color: $sample__color-text__normal;
 }
 
 .sample__title {
-    color: $color-main__dark;
+    color: $sample__color-main__dark;
 }
