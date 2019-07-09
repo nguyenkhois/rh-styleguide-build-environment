@@ -1,0 +1,24 @@
+@import '../../styles/breakpoints';
+
+// General setting
+$page-content__max-width: 70em;
+
+// Color
+$color-main__dark: #004890;
+$color-main__light: #d0e3f3;
+$color-text__normal: initial;
+
+// Placeholder
+$placeholder__width: 100%;
+$placeholder__max-width: initial;
+$placeholder__border: initial;
+$placeholder__margin: auto;
+$placeholder__background-color: $color-main__light;
+
+// Component's setting
+$cookie__border: initial;
+$cookie__width: 100%;
+$cookie__max-width: $page-content__max-width;
+$cookie__margin: auto;
+
+$cookie__button__min-width: 13ex;

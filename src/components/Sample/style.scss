@@ -1,0 +1,27 @@
+@import './settings.scss';
+
+// Placeholder
+.sample__placehoder {
+    width: $placeholder__width;
+    max-width: $placeholder__max-width;
+    border: $placeholder__border;
+    margin: $placeholder__margin;
+    background-color: $placeholder__background-color;
+}
+
+// Container - Component
+.sample {
+    border: $sample__border;
+    width: $sample__width;
+    max-width: $sample__max-width;
+    margin: $sample__margin;
+}
+
+// Elements
+.sample__description {
+    color: $color-text__normal;
+}
+
+.sample__title {
+    color: $color-main__dark;
+}
