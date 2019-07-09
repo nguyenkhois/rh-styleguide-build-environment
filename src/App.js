@@ -5,7 +5,7 @@ import './styles/stilguide.css'; // The main CSS + components are included
 
 
 import { Sample } from './components/Sample/Sample';
-import { CookieNotice } from './components/CookieNotice/CookieNotice';
+import { CookieNotice } from './components/CookieNotice/cookie-notice';
 
 class App extends Component {
     render() {

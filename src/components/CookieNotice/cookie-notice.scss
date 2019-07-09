@@ -1,4 +1,4 @@
-@import './settings.scss';
+@import './cookie-notice.settings.scss';
 
 // Placeholder
 .fix-cookie__placehoder {
@@ -33,5 +33,6 @@
 
     &-button {
         min-width: $cookie__button__min-width; // Using for IE11
+        cursor: pointer;
     }
 }
