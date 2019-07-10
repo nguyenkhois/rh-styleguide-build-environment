@@ -42,7 +42,8 @@ module.exports = {
             test: /\.(png|jpg|gif|svg)$/i
         }),
         new CopyWebpackPlugin([
-            { from: 'src/images', to: 'images' }
+            { from: 'src/images', to: 'images' },
+            { from: 'assets', to: '' }
         ])
     ]
 };
