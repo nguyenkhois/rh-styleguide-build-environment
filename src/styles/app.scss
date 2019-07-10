@@ -1,0 +1,18 @@
+.app-header {
+    margin: 2em;
+
+    h1 {
+        color: #135c86;
+    }
+
+    &__menu {
+
+        a {
+            text-decoration: none;
+            color: #1a76ac;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}

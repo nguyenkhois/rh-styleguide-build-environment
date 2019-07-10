@@ -12,7 +12,8 @@ module.exports = {
     entry: customConfigs.entryPoints,// which file to begin with
     output: {
         path: path.resolve(__dirname, customConfigs.distDir), // what folder to put bundle in
-        filename: '[name].[hash].js' // what name to use for bundle
+        filename: '[name].[hash].js', // what name to use for bundle
+        publicPath: '/'
     },
     module: {
         rules: [

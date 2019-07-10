@@ -14,7 +14,8 @@ module.exports = merge(common, {
         watchOptions: {
             ignored: /node_modules/
         },
-        hot: true
+        hot: true,
+        historyApiFallback: true
     },
     module: {
         rules: [
