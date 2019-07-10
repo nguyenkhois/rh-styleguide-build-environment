@@ -22,6 +22,10 @@ module.exports = {
                     path.resolve(__dirname, "src")
                 ],
                 use: ['babel-loader']
+            },
+            {
+                test: /\.hbs$/i,
+                use: 'raw-loader',
             }
         ]
     },
