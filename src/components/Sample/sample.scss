@@ -9,19 +9,19 @@
     background-color: $sample__placeholder__background-color;
 }
 
-// Container - Component
+// Container - Component - Elements
 .sample {
     border: $sample__border;
     width: $sample__width;
     max-width: $sample__max-width;
     margin: $sample__margin;
-}
 
-// Elements
-.sample__description {
-    color: $sample__color-text__normal;
-}
+    &__description {
+        color: $sample__color-text__normal;
+    }
 
-.sample__title {
-    color: $sample__color-main__dark;
+    &__title {
+        color: $sample__color-main__dark;
+    }
+
 }
