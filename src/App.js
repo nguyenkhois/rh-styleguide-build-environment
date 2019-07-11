@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import './styles/app.scss';
-
 /* Styleguide */
-//import './styles/main.css';
-import './styles/stilguide.css';
+import './styles/styleguide/stilguide.css';
+
+import './styles/app.scss';
 
 /* Components */
 import { Sample } from './components/Sample/Sample';
