@@ -9,6 +9,7 @@ import './styles/app.scss';
 /* Components */
 import { Sample } from './components/Sample/Sample';
 import { CookieNotice } from './components/CookieNotice/cookie-notice';
+import { FeedBackForm } from './components/FeedbackForm/feedback-form';
 
 const Header = () => (
     <section className="app-header">
@@ -25,10 +26,13 @@ const Header = () => (
                     <Link to="/cookienotice/">Cookie notice</Link>
                 </li>
                 <li>
+                    <Link to="/feedbackform/">Feedback form</Link>
+                </li>
+                <li>
                     <Link to="/sample/">Sample</Link>
                 </li>
             </ul>
-        </nav>       
+        </nav>
     </section>
 );
 
@@ -39,6 +43,7 @@ class App extends Component {
                 <Header />
 
                 <Route path="/cookienotice/" component={CookieNotice} />
+                <Route path="/feedbackform/" component={FeedBackForm} />
                 <Route path="/sample/" component={Sample} />
             </Router>
         );

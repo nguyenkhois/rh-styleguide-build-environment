@@ -1,0 +1,22 @@
+@import '../../styles/common';
+
+// Color
+$feedback-form__color-main__dark: #003265;
+//$feedback-form__color-main__light: #f4f4f4;
+$feedback-form__color-text__normal: initial;
+
+$feedback-form__placeholder__width: 100%;
+$feedback-form__placeholder__max-width: 21.5em; // 344px
+$feedback-form__placeholder__border: initial;
+$feedback-form__placeholder__border-radius: 0.2em; //4px
+$feedback-form__placeholder__margin: auto;
+$feedback-form__placeholder__background-color: #f4f4f4;
+$feedback-form__placeholder__padding: 1.5625em 0.875em 1.875em 0.875em; //25-14-30-14px
+
+// Component's setting
+$feedback-form__border: initial;
+$feedback-form__width: 100%;
+$feedback-form__max-width: $page-content__max-width;
+$feedback-form__margin: auto;
+
+$feedback-form__button__min-width: 13ex;

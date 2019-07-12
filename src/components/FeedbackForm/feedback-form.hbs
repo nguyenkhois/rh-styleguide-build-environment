@@ -1,0 +1,76 @@
+{{!-- 
+
+// COMPONENT NAME STRUCTURE
+BEM (block__element--modifier)
+
+rh-breadcrumbs
+rh-breadcrumbs__link
+rh-breadcrumbs__link--active
+
+rh-breadcrumbs (molekyl)
+rh-breadcrumbs__item (del av molekylen)
+rh-breadcrumbs__link (definieras i molekylen - beteende som är specifikt för atomen när den ingår i molekylen, tex padding eller färg)
+rh-link (atomens basklass). 
+
+<ul class="rh-breadcrumbs">
+    <li class="rh-breadcrumbs__item">
+        <a class="rh-link rh-breadcrumbs__link" href="">Startsida</a>
+    </li>
+    <li class="rh-breadcrumbs__item">
+      <a class="rh-link rh-breadcrumbs_link rh-breadcrumbs_link--active" href="">Undersida</a>
+    </li>
+</ul>
+
+// COMPONENT STRUCTURE
+<placeholder>
+    <element>
+        <header></header>
+        <body></body>
+        <footer></footer>
+    </element>
+</placeholder>
+--}}
+
+<div class="feedback-form feedback-form__placehoder" aria-label="Ge feedback information">
+    <div>
+        <div class="feedback-form__header">
+            <h3>Ge feedback</h4>
+        </div>
+        <div class="feedback-form__body">
+            <form action="#">
+                <p class="feedback-form__body__text--notice"><span class="feedback-form__text--required">*</span> = Obligatorisk uppgift</p>
+                <p class="feedback-form__body__text--notice"><span class="feedback-form__text--required">**</span> == Icke Obligatorisk uppgift</p>
+
+                <div class="rh-form-group">
+                    <label class="feedback-form__body__label-message" for="feedback-form__message">Meddelandet (det du skickar till
+                        Vårdgivarwebben
+                        blir en allmän handling) <span class="feedback-form__body__text--required">*</span></label>
+                    <textarea id="feedback-form__message" maxlength="255" wrap="soft" class="rh-form-input feedback-form__body__message"
+                        placeholder="Fyll i ditt meddelande"
+                    ></textarea>
+                </div>
+
+                <div class="feedback-form__body__description">
+                    <p>När du skickar ett meddelande via ett formulär på en av Region Hallands webbplatser kan du välja
+                        om du
+                        vill
+                        ha svar på ditt meddelande. Om du vill ha svar behöver du lämna din e-postadress.</p>
+
+                    <p><a href="#" class="rh-link rh-link--external">Här kan du läsa mer om hur vi hanterar personuppgifter.</a></p>
+                </div>
+
+                <div class="rh-form-group">
+                    <label class="rh-form-label" for="feedback-form__email">
+                        Din e-postadress
+                        <span class="feedback-form__text--required">**</span>
+                    </label>
+                    <input id="feedback-form__email" autocomplete="email" type="text" class="rh-form-input feedback-form__body__input"
+                        placeholder="Fyll i din mejladress">
+                </div>
+
+                <button class="rh-button rh-button--primary feedback-form__body__button-send-message"
+                    aria-label="Skicka in feedback" role="button">Skicka in</button>
+            </form>
+        </div>
+    </div>
+</div>
