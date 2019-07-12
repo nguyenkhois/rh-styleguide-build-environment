@@ -3,9 +3,6 @@
 $feedback-form__color--required: #ff0000;
 
 .feedback-form {
-    //color: red; // Using only for testing the structure
-    //font-size: 15px; // 15px - .9375em
-
     // General
     &__text--required {
         color: $feedback-form__color--required;
@@ -13,11 +10,12 @@ $feedback-form__color--required: #ff0000;
 
     &__placehoder {
         /* Box-modell/beteende */
-        width: $feedback-form__placeholder__width;
-        max-width: $feedback-form__placeholder__max-width;
-        min-width: 320px; // iPhone 5/SE
-        border: $feedback-form__placeholder__border;
-        margin: $feedback-form__placeholder__margin;
+        width: $feedback-form__placeholder--width;
+        max-width: $feedback-form__placeholder--max-width;
+        min-width: $feedback-form__placeholder--min-width;
+        
+        border: $feedback-form__placeholder--border;
+        margin: $feedback-form__placeholder--margin;
     }
 
     &__header {
@@ -26,12 +24,13 @@ $feedback-form__color--required: #ff0000;
         }
     }
 
-    // Container - Component - Elements
     &__body {
-        border-radius: $feedback-form__placeholder__border-radius;
-        background-color: $feedback-form__placeholder__background-color;
-        padding: $feedback-form__placeholder__padding;
-        margin-top: .4em;
+        border-radius: $feedback-form__body--border-radius;
+        background-color: $feedback-form__body--background-color;
+        
+        padding: $feedback-form__body--padding;
+        margin: $feedback-form__body--margin;
+        
         &__input {
             height: 3.215em;
         }
@@ -44,7 +43,6 @@ $feedback-form__color--required: #ff0000;
             padding: 6px 12px;
             font-size: 1em;
             line-height: 1.4;
-            background-color: #fff;
             border: 1px solid #D1D1D1;
             border-radius: 0.2em;
         }
@@ -65,15 +63,15 @@ $feedback-form__color--required: #ff0000;
 
         &__button-send-message { //120-50px
             padding: 1em 1.687em;
-            background-color: $feedback-form__color-main__dark;
+            background-color: $feedback-form__color-main--dark;
             font-size: 1em; //16px
 
-            margin-top: 1.5em;
+            margin: $feedback-form__body__button-send-message--margin;
             cursor: pointer;
         }
 
         a {
-            color: #004890;
+            color: $feedback-form__color-link--normal;
 
             &:hover {
                 text-decoration: none;
@@ -82,7 +80,7 @@ $feedback-form__color--required: #ff0000;
         
 
         &__description {
-            margin-bottom: 2.2em;
+            margin: $feedback-form__body__description--margin;
 
             p {
                 margin-bottom: 1.5em;
