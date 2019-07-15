@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 /* Styleguide */
@@ -36,18 +36,16 @@ const Header = () => (
     </section>
 );
 
-class App extends Component {
-    render() {
-        return (
-            <Router>
-                <Header />
+function App(){
+    return (
+        <Router>
+            <Header />
 
-                <Route path="/cookienotice/" component={CookieNotice} />
-                <Route path="/feedbackform/" component={FeedBackForm} />
-                <Route path="/sample/" component={Sample} />
-            </Router>
-        );
-    }
-};
+            <Route path="/cookienotice/" component={CookieNotice} />
+            <Route path="/feedbackform/" component={FeedBackForm} />
+            <Route path="/sample/" component={Sample} />
+        </Router>
+    );
+}
 
 export default App;

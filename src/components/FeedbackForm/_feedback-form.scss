@@ -16,6 +16,14 @@ $feedback-form__color--required: #ff0000;
         
         border: $feedback-form__placeholder--border;
         margin: $feedback-form__placeholder--margin;
+
+        @include medium {
+            max-width: $feedback-form__placeholder--max-width-medium;
+        }
+
+        @include large {
+            max-width: $feedback-form__placeholder--max-width-large;
+        }
     }
 
     &__header {
