@@ -7,12 +7,10 @@ import { context } from './cookie-notice.config.json';
 import hbsSource from './cookie-notice.hbs';
 const hbsTemplate = Handlebars.compile(hbsSource);
 
-export class CookieNotice extends Component {
-    render() {
-        return (
-            <React.Fragment>
-                <span dangerouslySetInnerHTML={{ __html: hbsTemplate(context) }} />
-            </React.Fragment>
-        );
-    }
-};
+export default function CookieNotice () {
+    return (
+        <React.Fragment>
+            <span dangerouslySetInnerHTML={{ __html: hbsTemplate(context) }} />
+        </React.Fragment>
+    );
+}

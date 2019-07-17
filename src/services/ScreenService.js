@@ -15,16 +15,18 @@ function getElementSizeByClassName(elementClassName) {
 
 function getElementFontSize(elementName = 'html') {
     const elem = document.querySelector(elementName);
-    return parseFloat(window.getComputedStyle(elem).fontSize); // pixel
+    return parseFloat(window.getComputedStyle(elem).fontSize); // Returns pixel
 }
 
 function calculatePxToEm(pxParam = 16) {
     return pxParam/ 16;
 }
 
-export {
-    getViewportSize,
-    getElementSizeByClassName,
-    getElementFontSize,
-    calculatePxToEm
+const ScreenService = {
+    viewportSize: getViewportSize,
+    elementSizeByClassName: getElementSizeByClassName,
+    elementFontSize: getElementFontSize,
+    pxToEm: calculatePxToEm
 }
+
+export default ScreenService;

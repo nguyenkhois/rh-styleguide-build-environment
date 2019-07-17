@@ -3,13 +3,12 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 /* Styleguide */
 import './styles/styleguide/stilguide.css';
-
 import './styles/app.scss';
 
 /* Components */
 import { Sample } from './components/Sample/Sample';
-import { CookieNotice } from './components/CookieNotice/cookie-notice';
-import { FeedBackForm } from './components/FeedbackForm/feedback-form';
+import CookieNotice from './components/CookieNotice/cookie-notice';
+import FeedbackForm from './components/FeedbackForm/feedback-form';
 
 const Header = () => (
     <section className="app__header">
@@ -42,7 +41,7 @@ function App(){
             <Header />
 
             <Route path="/cookienotice/" component={CookieNotice} />
-            <Route path="/feedbackform/" component={FeedBackForm} />
+            <Route path="/feedbackform/" component={FeedbackForm} />
             <Route path="/sample/" component={Sample} />
         </Router>
     );
