@@ -8,20 +8,14 @@ $feedback-form__color-link--normal: #004890;
 
 // Placeholder
 $feedback-form__placeholder--width: 100%;
-$feedback-form__placeholder--max-width: 21.5em; // 344px - Standard  - iPhone 6
+$feedback-form__placeholder--max-width: 42em; // 344px - Standard  - iPhone 6
 $feedback-form__placeholder--min-width: 20em; // 320px - iPhone 5/SE
 
 $feedback-form__placeholder--border: initial;
-$feedback-form__placeholder--border-radius: initial;
 
 $feedback-form__placeholder--margin: auto;
-$feedback-form__placeholder--padding: initial;
+$feedback-form__placeholder--padding: 1em;
 
-$feedback-form__placeholder--background-color: initial;
-
-// Placeholder - Responsive
-$feedback-form__placeholder--max-width-medium: 35.5em; // 568px
-$feedback-form__placeholder--max-width-large: 40em; // 640px
 
 // Component's setting
 $feedback-form__body--border-radius: 0.2em; // 4px

@@ -1,19 +1,21 @@
-.app-header {
-    margin: 2em;
+.app {
+    &__header {
+        margin: 2em;
 
-    h1 {
-        color: #135c86;
-    }
-
-    &__menu {
-
-        a {
-            text-decoration: none;
-            color: #1a76ac;
-            line-height: 1.5em;
+        h1 {
+            color: #135c86;
         }
-        a:hover {
-            text-decoration: underline;
+
+        &__menu {
+
+            a {
+                text-decoration: none;
+                color: #1a76ac;
+                line-height: 1.5em;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
