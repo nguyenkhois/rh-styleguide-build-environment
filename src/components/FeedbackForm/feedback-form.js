@@ -22,7 +22,7 @@ export default function FeedbackForm() {
                 componentClassName={componentClassName}
             />
             
-            <span dangerouslySetInnerHTML={{ __html: hbsTemplate(context) }} />
+            <div dangerouslySetInnerHTML={{ __html: hbsTemplate(context) }} />
         </React.Fragment>
     );
 }

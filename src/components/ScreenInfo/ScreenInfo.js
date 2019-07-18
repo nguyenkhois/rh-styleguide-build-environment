@@ -54,13 +54,17 @@ export default function ScreenInfo(props) {
             <div>
                 <h3>Information:</h3>
                 {viewportWidth && viewportHeight &&
-                    <p>Viewport size: {viewportWidth} x {viewportHeight}px ({ScreenService.pxToEm(viewportWidth)} x {ScreenService.pxToEm(viewportHeight)}em)</p>}
+                    <p>Viewport size: {viewportWidth} x {viewportHeight}? 
+                    ({ScreenService.ptToPx(viewportWidth)} x {ScreenService.ptToPx(viewportHeight)}px)
+                    ({ScreenService.ptToEm(viewportWidth)} x {ScreenService.ptToEm(viewportHeight)}em)
+                    </p>
+                }
 
                 {containerWidth && containerHeight &&
-                    <p>Container size: {containerWidth} x {containerHeight}px ({ScreenService.pxToEm(containerWidth)} x {ScreenService.pxToEm(containerHeight)}em)</p>}
+                    <p>Container size: {containerWidth} x {containerHeight}? ({ScreenService.pxToEm(containerWidth)} x {ScreenService.pxToEm(containerHeight)}em)</p>}
 
                 {componentWidth && componentHeight &&
-                    <p>Component size: {componentWidth} x {componentHeight}px ({ScreenService.pxToEm(componentWidth)} x {ScreenService.pxToEm(componentHeight)}em)</p>}
+                    <p>Component size: {componentWidth} x {componentHeight}? ({ScreenService.pxToEm(componentWidth)} x {ScreenService.pxToEm(componentHeight)}em)</p>}
                 
                 {rootFontSizeInPx && <p>The root font-size is {rootFontSizeInPx}px ({ScreenService.pxToEm(rootFontSizeInPx)}em)</p>}
             </div>

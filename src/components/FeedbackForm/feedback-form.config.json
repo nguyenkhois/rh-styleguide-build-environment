@@ -2,6 +2,45 @@
     "title": "Feedback from",
     "status": "wip",
     "context": {
-        
+        "message": {
+            "labelData": {
+                "text": "Meddelandet (det du skickar till Vårdgivarwebben blir en allmän handling)",
+                "forControlId": "feedback-form__message",
+                "extendClass": "rh-feedback-form__body__label-message",
+                "requirement": {
+                    "text": "*"
+                }
+            },
+            "controlData": {
+                "controlId": "feedback-form__message",
+                "placeholder":"Fyll i ditt meddelande",
+                "extendClass": "rh-feedback-form__body__message"
+            }
+        },
+        "linkToPersonInfo": {
+            "text": "Här kan du läsa mer om hur vi hanterar personuppgifter.",
+            "title": "GDPR",
+            "extendClass": "rh-feedback-form__body__link-privacy"
+        },
+        "email": {
+            "labelData": {
+                "text": "Din e-postadress",
+                "forControlId": "feedback-form__email",
+                "extendClass": "rh-feedback-form__body__label-email",
+                "requirement": {
+                    "text": "**"
+                }
+            },
+            "controlData": {
+                "controlId": "feedback-form__email",
+                "placeholder":"Fyll i din e-postadress",
+                "autocompleteType": "email",
+                "extendClass": "rh-feedback-form__body__input"
+            }
+        },
+        "btnSend": {
+            "text": "Skicka in",
+            "extendClass": "rh-feedback-form__body__button-send-message"
+        }
     }
 }

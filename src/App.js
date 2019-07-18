@@ -37,13 +37,15 @@ const Header = () => (
 
 function App(){
     return (
-        <Router>
-            <Header />
+        <div className="app__container">
+            <Router>
+                <Header />
 
-            <Route path="/cookienotice/" component={CookieNotice} />
-            <Route path="/feedbackform/" component={FeedbackForm} />
-            <Route path="/sample/" component={Sample} />
-        </Router>
+                <Route path="/cookienotice/" component={CookieNotice} />
+                <Route path="/feedbackform/" component={FeedbackForm} />
+                <Route path="/sample/" component={Sample} />
+            </Router>
+        </div>
     );
 }
 

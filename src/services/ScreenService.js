@@ -22,11 +22,21 @@ function calculatePxToEm(pxParam = 16) {
     return pxParam/ 16;
 }
 
+function calculatePtToEm(ptParam) {
+    return ptParam/ 12;
+}
+
+function calculatePtToPx(ptParam) {
+    return (ptParam*16)/ 12;
+}
+
 const ScreenService = {
     viewportSize: getViewportSize,
     elementSizeByClassName: getElementSizeByClassName,
     elementFontSize: getElementFontSize,
-    pxToEm: calculatePxToEm
+    pxToEm: calculatePxToEm,
+    ptToEm: calculatePtToEm,
+    ptToPx: calculatePtToPx
 }
 
 export default ScreenService;
