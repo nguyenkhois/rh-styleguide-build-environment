@@ -1,34 +1,17 @@
 @import './feedback-form.settings.scss';
 
-$feedback-form__color--required: #ff0000;
-
-.feedback-form {
-    // General
-    &__text--required {
-        color: $feedback-form__color--required;
-    }
-
+.rh-feedback-form {
     &__placehoder {
         /* Box-modell/beteende */
         width: $feedback-form__placeholder--width;
-        max-width: $feedback-form__placeholder--max-width;
-        min-width: $feedback-form__placeholder--min-width;
-        
-        border: $feedback-form__placeholder--border;
-        margin: $feedback-form__placeholder--margin;
-
-        @include medium {
-            max-width: $feedback-form__placeholder--max-width-medium;
-        }
-
-        @include large {
-            max-width: $feedback-form__placeholder--max-width-large;
-        }
+        max-width: $feedback-form__placeholder--max-width-large; // 640px
+        min-width: $feedback-form__placeholder--min-width; // 320px - iPhone 5/SE
     }
 
     &__header {
-        h3 {
-            font-size: 1.125em;
+        &__title {
+            font-size: 1.25em;
+            font-weight: bold;
         }
     }
 
@@ -39,34 +22,26 @@ $feedback-form__color--required: #ff0000;
         padding: $feedback-form__body--padding;
         margin: $feedback-form__body--margin;
         
+        &__message {
+            resize: none;
+        }
+
         &__input {
             height: 3.215em;
         }
 
-        &__message {
-            resize: none;
+        &__label {
+            &-message {
+                margin-bottom: 5px;
+                line-height: 1.4em;
+                font-size: .9375em;
+                margin-top: 1em;
+            }
 
-            height: 9em;
-            width: 100%;
-            padding: 6px 12px;
-            font-size: 1em;
-            line-height: 1.4;
-            border: 1px solid #D1D1D1;
-            border-radius: 0.2em;
-        }
-
-        &__label-message {
-            display: inline-block;
-            max-width: 100%;
-            margin-bottom: 5px;
-            line-height: 1.4em;
-            font-size: .9375em;
-            margin-top: 1em;
-        }
-
-        
-        &__text--notice {
-            font-size: .875em; // 14px
+            &-email {
+                font-size: 0.9375em; // 15px
+                font-weight: bold;
+            }
         }
 
         &__button-send-message { //120-50px
@@ -78,7 +53,7 @@ $feedback-form__color--required: #ff0000;
             cursor: pointer;
         }
 
-        a {
+        &__link-privacy {
             color: $feedback-form__color-link--normal;
 
             &:hover {
@@ -86,11 +61,10 @@ $feedback-form__color--required: #ff0000;
             }
         }
         
-
         &__description {
             margin: $feedback-form__body__description--margin;
 
-            p {
+            &-text {
                 margin-bottom: 1.5em;
             }
         }

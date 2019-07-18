@@ -3,21 +3,20 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 /* Styleguide */
 import './styles/styleguide/stilguide.css';
-
 import './styles/app.scss';
 
 /* Components */
 import { Sample } from './components/Sample/Sample';
-import { CookieNotice } from './components/CookieNotice/cookie-notice';
-import { FeedBackForm } from './components/FeedbackForm/feedback-form';
+import CookieNotice from './components/CookieNotice/cookie-notice';
+import FeedbackForm from './components/FeedbackForm/feedback-form';
 
 const Header = () => (
-    <section className="app-header">
+    <section className="app__header">
         <div>
             <h1>Styleguide build environment</h1>
         </div>
 
-        <nav className="app-header__menu">
+        <nav className="app__header__menu">
             <ul>
                 <li>
                     <Link to="/">Home</Link>
@@ -42,7 +41,7 @@ function App(){
             <Header />
 
             <Route path="/cookienotice/" component={CookieNotice} />
-            <Route path="/feedbackform/" component={FeedBackForm} />
+            <Route path="/feedbackform/" component={FeedbackForm} />
             <Route path="/sample/" component={Sample} />
         </Router>
     );
