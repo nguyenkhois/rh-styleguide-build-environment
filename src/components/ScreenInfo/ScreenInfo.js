@@ -15,7 +15,6 @@ export default function ScreenInfo(props) {
         [componentHeight, setComponentHeight] = useState(0);
 
     const rootFontSizeInPx = ScreenService.elementFontSize('html');
-    const rootFontSizeInEm = ScreenService.pxToEm(rootFontSizeInPx);
 
     useEffect(() => {
         function reportViewportSize() {
@@ -54,10 +53,16 @@ export default function ScreenInfo(props) {
         <React.Fragment>
             <div>
                 <h3>Information:</h3>
-                <p>Viewport size: {viewportWidth} x {viewportHeight}px ({ScreenService.pxToEm(viewportWidth)} x {ScreenService.pxToEm(viewportHeight)}em)</p>
-                <p>Container size: {containerWidth} x {containerHeight}px ({ScreenService.pxToEm(containerWidth)} x {ScreenService.pxToEm(containerHeight)}em)</p>
-                <p>Component size: {componentWidth} x {componentHeight}px ({ScreenService.pxToEm(componentWidth)} x {ScreenService.pxToEm(componentHeight)}em)</p>
-                <p>The root font-size is {rootFontSizeInPx}px ({rootFontSizeInEm}em)</p>
+                {viewportWidth && viewportHeight &&
+                    <p>Viewport size: {viewportWidth} x {viewportHeight}px ({ScreenService.pxToEm(viewportWidth)} x {ScreenService.pxToEm(viewportHeight)}em)</p>}
+
+                {containerWidth && containerHeight &&
+                    <p>Container size: {containerWidth} x {containerHeight}px ({ScreenService.pxToEm(containerWidth)} x {ScreenService.pxToEm(containerHeight)}em)</p>}
+
+                {componentWidth && componentHeight &&
+                    <p>Component size: {componentWidth} x {componentHeight}px ({ScreenService.pxToEm(componentWidth)} x {ScreenService.pxToEm(componentHeight)}em)</p>}
+                
+                {rootFontSizeInPx && <p>The root font-size is {rootFontSizeInPx}px ({ScreenService.pxToEm(rootFontSizeInPx)}em)</p>}
             </div>
         </React.Fragment>
     );

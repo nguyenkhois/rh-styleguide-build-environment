@@ -20,8 +20,9 @@ $feedback-form__color--required: #ff0000;
     }
 
     &__header {
-        h3 {
+        &-information-title {
             font-size: 1.125em;
+            font-weight: bold;
         }
     }
 
