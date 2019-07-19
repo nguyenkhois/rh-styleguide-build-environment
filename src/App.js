@@ -13,7 +13,7 @@ import FeedbackForm from './components/FeedbackForm/feedback-form';
 const Header = () => (
     <section className="app__header">
         <div>
-            <h1>Styleguide build environment</h1>
+            <h1>Styleguide test environment</h1>
         </div>
 
         <nav className="app__header__menu">

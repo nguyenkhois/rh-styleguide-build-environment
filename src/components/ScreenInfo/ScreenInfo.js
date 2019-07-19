@@ -27,17 +27,17 @@ export default function ScreenInfo(props) {
 
         function reportContainerSize() {
             if (placeholderClassName){
-                const containerSize = ScreenService.elementSizeByClassName(placeholderClassName) || {};
-                setContainerWidth(containerSize.width);
-                setContainerHeight(containerSize.height);
+                const { width, height } = ScreenService.elementSizeByClassName(placeholderClassName) || {};
+                setContainerWidth(width);
+                setContainerHeight(height);
             }
         }
 
         function reportComponentSize() {
             if (componentClassName){
-                const componentSize = ScreenService.elementSizeByClassName(componentClassName) || {};
-                setComponentWidth(componentSize.width);
-                setComponentHeight(componentSize.height);
+                const { width, height } = ScreenService.elementSizeByClassName(componentClassName) || {};
+                setComponentWidth(width);
+                setComponentHeight(height);
             }
         }
 
@@ -64,20 +64,18 @@ export default function ScreenInfo(props) {
 
                     {viewportWidth && viewportHeight &&
                         <p>Viewport size: {viewportWidth} x {viewportHeight}px<br/>
-                        ({ScreenService.pxToEm(viewportWidth)} x {ScreenService.pxToEm(viewportHeight)}em)
-                        </p>
-                    }
+                        <span className="app__detail-info__text-notice">({ScreenService.pxToEm(viewportWidth)} x {ScreenService.pxToEm(viewportHeight)}em)</span></p>}
 
                     {containerWidth > 0 && containerHeight > 0 &&
                         <p>Container size: {containerWidth} x {containerHeight}px<br/>
-                        ({ScreenService.pxToEm(containerWidth)} x {ScreenService.pxToEm(containerHeight)}em)</p>}
+                        <span className="app__detail-info__text-notice">({ScreenService.pxToEm(containerWidth)} x {ScreenService.pxToEm(containerHeight)}em)</span></p>}
 
                     {componentWidth > 0 && componentHeight > 0 &&
                         <p>Component size: {componentWidth} x {componentHeight}px<br/>
-                        ({ScreenService.pxToEm(componentWidth)} x {ScreenService.pxToEm(componentHeight)}em)</p>}
+                        <span className="app__detail-info__text-notice">({ScreenService.pxToEm(componentWidth)} x {ScreenService.pxToEm(componentHeight)}em)</span></p>}
 
                     {rootFontSizeInPx && <p>The root font-size is {rootFontSizeInPx}px
-                    ({ScreenService.pxToEm(rootFontSizeInPx)}em)</p>}
+                    <span className="app__detail-info__text-notice"> ({ScreenService.pxToEm(rootFontSizeInPx)}em)</span></p>}
                 </details>
             </div>
         </React.Fragment>

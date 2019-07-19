@@ -1,6 +1,6 @@
 .app {
     &__header {
-        margin: 2em;
+        margin: 1em 0;
 
         h1 {
             color: #135c86;
@@ -18,6 +18,10 @@
         }
     }
 
+    &__container {
+        padding: .955em;
+    }
+
     &__detail-info {
         margin: 2em 0;
 
@@ -33,9 +37,12 @@
             color: blue;
             font-weight: bold;
         }
+
+        &__text-notice {
+            color: #808080;
+            font-size: .9em
+        }
     }
 
-    &__container {
-        padding: .955em;
-    }
+    
 }
