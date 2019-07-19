@@ -11,6 +11,10 @@ import hbsSource from './feedback-form.hbs';
 const placeholderClassName = "rh-feedback-form__placehoder";
 const componentClassName = "rh-feedback-form";
 
+/* Testing */
+import './test/feedback-form.css';
+/* End of testing */
+
 export default function FeedbackForm() {
     const hbsTemplate = Handlebars.compile(hbsSource);
 

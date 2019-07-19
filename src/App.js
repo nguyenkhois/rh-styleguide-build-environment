@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 /* Styleguide */
-import './styles/styleguide/stilguide.css';
+//import './styles/styleguide/stilguide.css';
+import './styles/styleguide/main.css';
 import './styles/app.scss';
 
 /* Components */
