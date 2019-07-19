@@ -6,8 +6,16 @@ function getViewportSize() {
 }
 
 function getElementSizeByClassName(elementClassName) {
-    const elem = document.getElementsByClassName(elementClassName),
-        width = elem[0].offsetWidth,
+    if (!elementClassName) {
+        throw new Error('Missing the HTML element CSS class name');
+    }
+
+    const elem = document.getElementsByClassName(elementClassName);
+    if (!elem.length) {
+        throw new Error(`The HTML element CSS class name '${elementClassName}' is not found`);
+    }
+
+    const width = elem[0].offsetWidth,
         height = elem[0].offsetHeight;
 
     return { width, height };
@@ -18,16 +26,19 @@ function getElementFontSize(elementName = 'html') {
     return parseFloat(window.getComputedStyle(elem).fontSize); // Returns pixel
 }
 
-function calculatePxToEm(pxParam = 16) {
-    return pxParam/ 16;
+function calculatePxToEm(pxParam = 16, fractionDigits) {
+    const result = pxParam / 16;
+    return fractionDigits ? parseFloat(result).toFixed(fractionDigits) : result;
 }
 
-function calculatePtToEm(ptParam) {
-    return ptParam/ 12;
+function calculatePtToEm(ptParam, fractionDigits) {
+    const result = ptParam / 12;
+    return fractionDigits ? parseFloat(result).toFixed(fractionDigits) : result;;
 }
 
-function calculatePtToPx(ptParam) {
-    return (ptParam*16)/ 12;
+function calculatePtToPx(ptParam, fractionDigits) {
+    const result = (ptParam * 16) / 12;
+    return fractionDigits ? parseFloat(result).toFixed(fractionDigits) : result;;
 }
 
 const ScreenService = {

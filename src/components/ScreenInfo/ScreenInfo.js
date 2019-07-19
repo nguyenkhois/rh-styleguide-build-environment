@@ -16,6 +16,8 @@ export default function ScreenInfo(props) {
 
     const rootFontSizeInPx = ScreenService.elementFontSize('html');
 
+    const devicePixelRatio = window.devicePixelRatio || 1;
+
     useEffect(() => {
         function reportViewportSize() {
             const { width, height } = ScreenService.viewportSize() || {};
@@ -24,15 +26,19 @@ export default function ScreenInfo(props) {
         }
 
         function reportContainerSize() {
-            const containerSize = ScreenService.elementSizeByClassName(placeholderClassName) || {};
-            setContainerHeight(containerSize.height);
-            setContainerWidth(containerSize.width);
+            if (placeholderClassName){
+                const containerSize = ScreenService.elementSizeByClassName(placeholderClassName) || {};
+                setContainerWidth(containerSize.width);
+                setContainerHeight(containerSize.height);
+            }
         }
 
         function reportComponentSize() {
-            const componentSize = ScreenService.elementSizeByClassName(componentClassName) || {};
-            setComponentWidth(componentSize.width);
-            setComponentHeight(componentSize.height);
+            if (componentClassName){
+                const componentSize = ScreenService.elementSizeByClassName(componentClassName) || {};
+                setComponentWidth(componentSize.width);
+                setComponentHeight(componentSize.height);
+            }
         }
 
         function getScreenInfo() {
@@ -51,22 +57,28 @@ export default function ScreenInfo(props) {
 
     return (
         <React.Fragment>
-            <div>
-                <h3>Information:</h3>
-                {viewportWidth && viewportHeight &&
-                    <p>Viewport size: {viewportWidth} x {viewportHeight}? 
-                    ({ScreenService.ptToPx(viewportWidth)} x {ScreenService.ptToPx(viewportHeight)}px)
-                    ({ScreenService.ptToEm(viewportWidth)} x {ScreenService.ptToEm(viewportHeight)}em)
-                    </p>
-                }
+            <div className="app__detail-info">
+                <details className="app__detail-info__container" open>
+                    <summary className="app__detail-info__title">Information</summary>
+                    {devicePixelRatio && <p>Device pixel ratio is <span className="app__detail-info__text-important">{devicePixelRatio}</span></p>}
 
-                {containerWidth && containerHeight &&
-                    <p>Container size: {containerWidth} x {containerHeight}? ({ScreenService.pxToEm(containerWidth)} x {ScreenService.pxToEm(containerHeight)}em)</p>}
+                    {viewportWidth && viewportHeight &&
+                        <p>Viewport size: {viewportWidth} x {viewportHeight}px<br/>
+                        ({ScreenService.pxToEm(viewportWidth)} x {ScreenService.pxToEm(viewportHeight)}em)
+                        </p>
+                    }
 
-                {componentWidth && componentHeight &&
-                    <p>Component size: {componentWidth} x {componentHeight}? ({ScreenService.pxToEm(componentWidth)} x {ScreenService.pxToEm(componentHeight)}em)</p>}
-                
-                {rootFontSizeInPx && <p>The root font-size is {rootFontSizeInPx}px ({ScreenService.pxToEm(rootFontSizeInPx)}em)</p>}
+                    {containerWidth > 0 && containerHeight > 0 &&
+                        <p>Container size: {containerWidth} x {containerHeight}px<br/>
+                        ({ScreenService.pxToEm(containerWidth)} x {ScreenService.pxToEm(containerHeight)}em)</p>}
+
+                    {componentWidth > 0 && componentHeight > 0 &&
+                        <p>Component size: {componentWidth} x {componentHeight}px<br/>
+                        ({ScreenService.pxToEm(componentWidth)} x {ScreenService.pxToEm(componentHeight)}em)</p>}
+
+                    {rootFontSizeInPx && <p>The root font-size is {rootFontSizeInPx}px
+                    ({ScreenService.pxToEm(rootFontSizeInPx)}em)</p>}
+                </details>
             </div>
         </React.Fragment>
     );
