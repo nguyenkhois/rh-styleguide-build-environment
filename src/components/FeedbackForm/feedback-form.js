@@ -8,8 +8,8 @@ import ScreenInfo from '../ScreenInfo/ScreenInfo';
 import { context } from './feedback-form.config.json';
 import hbsSource from './feedback-form.hbs';
 
-const placeholderClassName = "";
-const componentClassName = "";
+const placeholderClassName = "rh-feedback-form__placehoder";
+const componentClassName = "rh-feedback-form";
 
 export default function FeedbackForm() {
     const hbsTemplate = Handlebars.compile(hbsSource);
