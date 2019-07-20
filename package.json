@@ -1,7 +1,7 @@
 {
   "name": "react-advance",
   "version": "2.0.0",
-  "description": "The test environment",
+  "description": "The Styleguide test environment",
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js",
@@ -13,7 +13,7 @@
     "webpack",
     "buildenv"
   ],
-  "author": "",
+  "author": "Khoi Le",
   "license": "ISC",
   "dependencies": {
     "react": "^16.8.6",
