@@ -33,12 +33,17 @@ function calculatePxToEm(pxParam = 16, fractionDigits) {
 
 function calculatePtToEm(ptParam, fractionDigits) {
     const result = ptParam / 12;
-    return fractionDigits ? parseFloat(result).toFixed(fractionDigits) : result;;
+    return fractionDigits ? parseFloat(result).toFixed(fractionDigits) : result;
 }
 
 function calculatePtToPx(ptParam, fractionDigits) {
     const result = (ptParam * 16) / 12;
-    return fractionDigits ? parseFloat(result).toFixed(fractionDigits) : result;;
+    return fractionDigits ? parseFloat(result).toFixed(fractionDigits) : result;
+}
+
+function devicePixelRatio(fractionDigits) {
+    const result = window.devicePixelRatio || 1;
+    return fractionDigits ? parseFloat(result).toFixed(fractionDigits) : result;
 }
 
 const ScreenService = {
@@ -47,7 +52,8 @@ const ScreenService = {
     elementFontSize: getElementFontSize,
     pxToEm: calculatePxToEm,
     ptToEm: calculatePtToEm,
-    ptToPx: calculatePtToPx
+    ptToPx: calculatePtToPx,
+    devicePixelRatio: devicePixelRatio
 }
 
 export default ScreenService;

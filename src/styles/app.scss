@@ -1,6 +1,6 @@
 .app {
     &__header {
-        margin: 1em 0;
+        margin: 1em;
 
         h1 {
             color: #135c86;
@@ -18,12 +18,8 @@
         }
     }
 
-    &__container {
-        padding: .955em;
-    }
-
     &__detail-info {
-        margin: 2em 0;
+        margin: 2em 1em;
 
         &__title {
             font-weight: bold;
@@ -43,6 +39,4 @@
             font-size: .9em
         }
     }
-
-    
 }

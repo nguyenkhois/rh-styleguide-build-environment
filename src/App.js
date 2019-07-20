@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-/* Styleguide */
+import './styles/app.scss';
 //import './styles/styleguide/stilguide.css';
 import './styles/styleguide/main.css';
-import './styles/app.scss';
 
 /* Components */
-import { Sample } from './components/Sample/Sample';
+import Sample from './components/Sample/Sample';
 import CookieNotice from './components/CookieNotice/cookie-notice';
 import FeedbackForm from './components/FeedbackForm/feedback-form';
+import FeedbackFormStyleguide from './components/FeedbackFormStyleguide/feedback-form';
 
 const Header = () => (
     <section className="app__header">
@@ -26,7 +26,10 @@ const Header = () => (
                     <Link to="/cookienotice/">Cookie notice</Link>
                 </li>
                 <li>
-                    <Link to="/feedbackform/">Feedback form</Link>
+                    <Link to="/feedbackform/">Feedback form (Vårdgivarwebben)</Link>
+                </li>
+                <li>
+                    <Link to="/feedbackformstyleguide/">Feedback form (Styleguide)</Link>
                 </li>
                 <li>
                     <Link to="/sample/">Sample</Link>
@@ -36,17 +39,16 @@ const Header = () => (
     </section>
 );
 
-function App(){
+function App() {
     return (
-        <div className="app__container">
-            <Router>
-                <Header />
+        <Router>
+            <Header />
 
-                <Route path="/cookienotice/" component={CookieNotice} />
-                <Route path="/feedbackform/" component={FeedbackForm} />
-                <Route path="/sample/" component={Sample} />
-            </Router>
-        </div>
+            <Route path="/cookienotice/" component={CookieNotice} />
+            <Route path="/feedbackformstyleguide/" component={FeedbackFormStyleguide} />
+            <Route path="/feedbackform/" component={FeedbackForm} />
+            <Route path="/sample/" component={Sample} />
+        </Router>
     );
 }
 

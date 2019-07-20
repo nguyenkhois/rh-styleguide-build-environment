@@ -7,7 +7,7 @@ import { context } from './sample.config.json';
 import hbsSource from './sample.hbs';
 const hbsTemplate = Handlebars.compile(hbsSource);
 
-export class Sample extends Component {
+export default class Sample extends Component {
     render() {
         return (
             <React.Fragment>

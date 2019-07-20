@@ -16,8 +16,6 @@ export default function ScreenInfo(props) {
 
     const rootFontSizeInPx = ScreenService.elementFontSize('html');
 
-    const devicePixelRatio = window.devicePixelRatio || 1;
-
     useEffect(() => {
         function reportViewportSize() {
             const { width, height } = ScreenService.viewportSize() || {};
@@ -26,7 +24,7 @@ export default function ScreenInfo(props) {
         }
 
         function reportContainerSize() {
-            if (placeholderClassName){
+            if (placeholderClassName) {
                 const { width, height } = ScreenService.elementSizeByClassName(placeholderClassName) || {};
                 setContainerWidth(width);
                 setContainerHeight(height);
@@ -34,7 +32,7 @@ export default function ScreenInfo(props) {
         }
 
         function reportComponentSize() {
-            if (componentClassName){
+            if (componentClassName) {
                 const { width, height } = ScreenService.elementSizeByClassName(componentClassName) || {};
                 setComponentWidth(width);
                 setComponentHeight(height);
@@ -56,28 +54,26 @@ export default function ScreenInfo(props) {
     }, []);
 
     return (
-        <React.Fragment>
-            <div className="app__detail-info">
-                <details className="app__detail-info__container" open>
-                    <summary className="app__detail-info__title">Information</summary>
-                    {devicePixelRatio && <p>Device pixel ratio is <span className="app__detail-info__text-important">{devicePixelRatio}</span></p>}
+        <div className="app__detail-info">
+            <details className="app__detail-info__container">
+                <summary className="app__detail-info__title">Information</summary>
+                <p>Device pixel ratio is <span className="app__detail-info__text-important">{ScreenService.devicePixelRatio()}</span></p>
 
-                    {viewportWidth && viewportHeight &&
-                        <p>Viewport size: {viewportWidth} x {viewportHeight}px<br/>
+                {viewportWidth && viewportHeight &&
+                    <p>Viewport size: {viewportWidth} x {viewportHeight}px<br />
                         <span className="app__detail-info__text-notice">({ScreenService.pxToEm(viewportWidth)} x {ScreenService.pxToEm(viewportHeight)}em)</span></p>}
 
-                    {containerWidth > 0 && containerHeight > 0 &&
-                        <p>Container size: {containerWidth} x {containerHeight}px<br/>
+                {containerWidth > 0 && containerHeight > 0 &&
+                    <p>Container size: {containerWidth} x {containerHeight}px<br />
                         <span className="app__detail-info__text-notice">({ScreenService.pxToEm(containerWidth)} x {ScreenService.pxToEm(containerHeight)}em)</span></p>}
 
-                    {componentWidth > 0 && componentHeight > 0 &&
-                        <p>Component size: {componentWidth} x {componentHeight}px<br/>
+                {componentWidth > 0 && componentHeight > 0 &&
+                    <p>Component size: {componentWidth} x {componentHeight}px<br />
                         <span className="app__detail-info__text-notice">({ScreenService.pxToEm(componentWidth)} x {ScreenService.pxToEm(componentHeight)}em)</span></p>}
 
-                    {rootFontSizeInPx && <p>The root font-size is {rootFontSizeInPx}px
+                {rootFontSizeInPx && <p>The root font-size is {rootFontSizeInPx}px
                     <span className="app__detail-info__text-notice"> ({ScreenService.pxToEm(rootFontSizeInPx)}em)</span></p>}
-                </details>
-            </div>
-        </React.Fragment>
+            </details>
+        </div>
     );
 }

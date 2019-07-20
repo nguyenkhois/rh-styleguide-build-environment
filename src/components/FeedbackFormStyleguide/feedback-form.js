@@ -8,14 +8,14 @@ import './_feedback-form.scss';
 import { context } from './feedback-form.config.json';
 import hbsSource from './feedback-form.hbs';
 
-const placeholderClassName = "rh-feedback-form__container--extend";
+const placeholderClassName = "rh-feedback-form__container";
 const componentClassName = "rh-feedback-form";
 
 /* Testing */
 import './test/feedback-form.css';
 /* End of testing */
 
-export default function FeedbackForm() {
+export default function FeedbackFormStyleguide() {
     const hbsTemplate = Handlebars.compile(hbsSource);
 
     useEffect(() => { }, []);
@@ -29,7 +29,7 @@ export default function FeedbackForm() {
                 />
             </ErrorBoundary>
             
-            <div className="rh-feedback-form__container--extend" dangerouslySetInnerHTML={{ __html: hbsTemplate(context) }} />
+            <div className="rh-feedback-form__container" dangerouslySetInnerHTML={{ __html: hbsTemplate(context) }} />
         </React.Fragment>
     );
 }
