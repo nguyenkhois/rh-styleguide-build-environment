@@ -4,18 +4,18 @@ import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 import ScreenInfo from '../ScreenInfo/ScreenInfo';
 
 /* Component including */
-import './_feedback-form.scss';
-import { context } from './feedback-form.config.json';
-import hbsSource from './feedback-form.hbs';
+import './_event-calendar-block.scss';
+import { context } from './event-calendar-block.config.json';
+import hbsSource from './event-calendar-block.hbs';
 
-const placeholderClassName = "rh-feedback-form__container--extend";
-const componentClassName = "rh-feedback-form";
+const placeholderClassName = "rh-event-calendar-block__container--extend";
+const componentClassName = "rh-event-calendar-block";
 
 /* Testing */
-import './test/feedback-form.css';
+//import './test/event-calendar-block.css';
 /* End of testing */
 
-export default function FeedbackForm() {
+export default function EventCalendarBlock() {
     const hbsTemplate = Handlebars.compile(hbsSource);
 
     useEffect(() => { }, []);
