@@ -1,0 +1,158 @@
+@import '../../styles/breakpoints';
+@import './event-calendar-block.settings.scss';
+
+.rh-caption-mini {
+    /* Positionering */
+    position: $caption-mini--position;
+    @if $caption-mini--top {
+        top: $caption-mini--top;
+    }
+    @if $caption-mini--right {
+        right: $caption-mini--right;
+    }
+    @if $caption-mini--bottom {
+        bottom: $caption-mini--bottom;
+    }
+    @if $caption-mini--left {
+        left: $caption-mini--left;
+    }
+
+    // Använd en av dem åt gången (--has-triangle ELLER --square)
+    &--has-triangle {
+        /* Box modell/beteende */
+        height: 0;
+
+        /* Visuellt */
+        border-top: $caption-mini--triangle--border-top;
+        border-right: $caption-mini--triangle--border-right;
+        border-bottom: $caption-mini--triangle--border-bottom;
+        border-left: $caption-mini--triangle--border-left;
+
+        @include medium {
+            border-bottom: $caption-mini--triangle--border-bottom--medium;
+        }
+    }
+
+    &--square {
+        background-color: $caption-mini--square--background-color;
+        border-radius: $caption-mini--square--border-radius;
+        padding: $caption-mini--square--padding;
+        width: $caption-mini--square--width;
+    }
+
+    &-text {
+        /* Box modell/beteende */
+        margin: $caption-mini-text--margin;
+
+        /* Typografi */
+        font-size: $caption-mini-text--font-size;
+        font-weight: $caption-mini-text--font-weight;
+        line-height: $caption-mini-text--line-height;
+        color: $caption-mini-text--color;
+
+        @include medium {
+            font-size: $caption-mini-text--font-size--medium;
+        }
+    }
+}
+
+.rh-event-calendar-block {
+    /* Box-modell/beteende */
+    width: $event-calendar-block--width;
+    min-width: $event-calendar-block--min-width;
+    max-width: $event-calendar-block--max-width;
+    margin: $event-calendar-block--margin;
+
+    /* Visuellt */
+    @if $event-calendar-block--background-color {
+        background-color: $event-calendar-block--background-color;
+    }
+
+    &__header {
+        /* Positionering */
+        position: relative;
+
+        /* Box-modell/beteende */
+        display: block;
+        overflow: hidden;
+
+        &__hero-image {
+            /* Box-modell/beteende */
+            display: block;
+            min-height: $event-calendar-block__header__hero-image--min-height;
+            max-height: $event-calendar-block__header__hero-image--max-height;
+            width: $event-calendar-block__header__hero-image--width;
+        }
+    }
+
+    &__body {
+        &__title {
+            /* Box modell/beteende */
+            margin: $event-calendar-block__body__title--margin;
+
+            /* Typografi */
+            font-size: $event-calendar-block__body__title--font-size;
+            font-weight: $event-calendar-block__body__title--font-weight;
+        }
+    }
+}
+
+// Extend - Using for testing
+.rh-event-calendar-block__container--extend {
+    width: 100%;
+    min-width: 18em;
+    max-width: 90em; //1440px
+
+    margin: auto;
+    padding: 0 .5em;
+
+    // Testing
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.rh-event-calendar-block__space--extend {
+    margin: .5em;
+}
+
+.rh-event-calendar-block__caption--extend--left-bottom {
+    right: 1em;
+    bottom: 1em;
+}
+
+.rh-event-calendar-block__caption--extend--right-bottom {
+    right: 1em;
+    top: 1em;
+    bottom: auto;
+    border-radius: .5em
+}
+
+// Caption under image
+.rh-event-calendar-block__caption--extend--under {
+    position: static; // IE11
+    background: #f4f4f4;
+    line-height: 0.875em; // 14px
+
+    @include medium {
+        line-height: 1em; // 16px
+    }
+    @include large {
+        line-height: 1.0625em; // 17px
+    }
+    
+}
+.rh-caption-mini-text--extend {
+    color: #000000;
+    text-align: right;
+    font-size: 0.75em; // 12px
+    
+
+    @include medium {
+        font-size: 0.875em; // 14px
+    }
+    @include large {
+        font-size: 0.9375em; // 15px
+    }
+}

@@ -2,26 +2,30 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import './styles/app.scss';
-//import './styles/styleguide/stilguide.css';
-import './styles/styleguide/main.css';
+import './styles/styleguide/stilguide.css';
+//import './styles/styleguide/main.css';
 
 /* Components */
 import Sample from './components/Sample/Sample';
 import CookieNotice from './components/CookieNotice/cookie-notice';
 import FeedbackForm from './components/FeedbackForm/feedback-form';
 import FeedbackFormStyleguide from './components/FeedbackFormStyleguide/feedback-form';
+import EventCalendarBlock from './components/EventCalendarBlock/event-calendar-block';
 
 const Header = () => (
     <section className="app__header">
         <div>
             <h1>Styleguide test environment</h1>
+            <Link to="/" title="Go to the homepage">
+                <img src="/images/icon-home.png" className="app__header-icon" alt=""/>
+            </Link>
+
+            <a href="https://github.com/nguyenkhois/rh-styleguide-build-environment" title="View code on GitHub" 
+                target="_blank" rel="noopener noreferrer"><img src="/images/github-logo.png" alt=""/></a>
         </div>
 
         <nav className="app__header__menu">
             <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
                 <li>
                     <Link to="/cookienotice/">Cookie notice</Link>
                 </li>
@@ -30,6 +34,9 @@ const Header = () => (
                 </li>
                 <li>
                     <Link to="/feedbackformstyleguide/">Feedback form (Styleguide)</Link>
+                </li>
+                <li>
+                    <Link to="/eventcalendarblock/">Event calendar block</Link>
                 </li>
                 <li>
                     <Link to="/sample/">Sample</Link>
@@ -47,6 +54,7 @@ function App() {
             <Route path="/cookienotice/" component={CookieNotice} />
             <Route path="/feedbackformstyleguide/" component={FeedbackFormStyleguide} />
             <Route path="/feedbackform/" component={FeedbackForm} />
+            <Route path="/eventcalendarblock/" component={EventCalendarBlock} />
             <Route path="/sample/" component={Sample} />
         </Router>
     );
