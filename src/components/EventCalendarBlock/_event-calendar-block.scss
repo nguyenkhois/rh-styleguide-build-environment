@@ -3,7 +3,7 @@
 
 .rh-caption-mini {
     /* Positionering */
-    position: absolute;
+    position: $caption-mini--position;
     @if $caption-mini--top {
         top: $caption-mini--top;
     }
@@ -127,4 +127,32 @@
     top: 1em;
     bottom: auto;
     border-radius: .5em
+}
+
+// Caption under image
+.rh-event-calendar-block__caption--extend--under {
+    position: static; // IE11
+    background: #f4f4f4;
+    line-height: 0.875em; // 14px
+
+    @include medium {
+        line-height: 1em; // 16px
+    }
+    @include large {
+        line-height: 1.0625em; // 17px
+    }
+    
+}
+.rh-caption-mini-text--extend {
+    color: #000000;
+    text-align: right;
+    font-size: 0.75em; // 12px
+    
+
+    @include medium {
+        font-size: 0.875em; // 14px
+    }
+    @include large {
+        font-size: 0.9375em; // 15px
+    }
 }
