@@ -11,6 +11,7 @@ import CookieNotice from './components/CookieNotice/cookie-notice';
 import FeedbackForm from './components/FeedbackForm/feedback-form';
 import FeedbackFormStyleguide from './components/FeedbackFormStyleguide/feedback-form';
 import EventCalendarBlock from './components/EventCalendarBlock/event-calendar-block';
+import ImageBlock from './components/ImageBlock/image-block';
 
 const Header = () => (
     <section className="app__header">
@@ -39,6 +40,9 @@ const Header = () => (
                     <Link to="/eventcalendarblock/">Event calendar block</Link>
                 </li>
                 <li>
+                    <Link to="/imageblock/">Image block</Link>
+                </li>
+                <li>
                     <Link to="/sample/">Sample</Link>
                 </li>
             </ul>
@@ -55,6 +59,7 @@ function App() {
             <Route path="/feedbackformstyleguide/" component={FeedbackFormStyleguide} />
             <Route path="/feedbackform/" component={FeedbackForm} />
             <Route path="/eventcalendarblock/" component={EventCalendarBlock} />
+            <Route path="/imageblock/" component={ImageBlock} />
             <Route path="/sample/" component={Sample} />
         </Router>
     );
