@@ -40,6 +40,15 @@
         width: $caption-mini--square--width;
     }
 
+    &--under-image {
+        background-color: $caption-mini--under-image--background-color;
+        border-radius: $caption-mini--under-image--border-radius;
+        padding: $caption-mini--under-image--padding;
+        width: $caption-mini--under-image--width;
+
+        position: static; // IE11 - Reset position
+    }
+
     &-text {
         /* Box modell/beteende */
         margin: $caption-mini-text--margin;
@@ -130,29 +139,6 @@
 }
 
 // Caption under image
-.rh-event-calendar-block__caption--extend--under {
-    position: static; // IE11
-    background: #f4f4f4;
-    line-height: 0.875em; // 14px
-
-    @include medium {
-        line-height: 1em; // 16px
-    }
-    @include large {
-        line-height: 1.0625em; // 17px
-    }
-    
-}
 .rh-caption-mini-text--extend {
-    color: #000000;
-    text-align: right;
-    font-size: 0.75em; // 12px
-    
-
-    @include medium {
-        font-size: 0.875em; // 14px
-    }
-    @include large {
-        font-size: 0.9375em; // 15px
-    }
+    text-align: center;
 }
