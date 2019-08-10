@@ -12,6 +12,7 @@ import FeedbackForm from './components/FeedbackForm/feedback-form';
 import FeedbackFormStyleguide from './components/FeedbackFormStyleguide/feedback-form';
 import EventCalendarBlock from './components/EventCalendarBlock/event-calendar-block';
 import ImageBlock from './components/ImageBlock/image-block';
+import ImageHero from './components/ImageHero/image-hero';
 
 const Header = () => (
     <section className="app__header">
@@ -43,6 +44,9 @@ const Header = () => (
                     <Link to="/imageblock/">Image block</Link>
                 </li>
                 <li>
+                    <Link to="/imagehero/">Image hero</Link>
+                </li>
+                <li>
                     <Link to="/sample/">Sample</Link>
                 </li>
             </ul>
@@ -60,6 +64,7 @@ function App() {
             <Route path="/feedbackform/" component={FeedbackForm} />
             <Route path="/eventcalendarblock/" component={EventCalendarBlock} />
             <Route path="/imageblock/" component={ImageBlock} />
+            <Route path="/imagehero/" component={ImageHero} />
             <Route path="/sample/" component={Sample} />
         </Router>
     );
