@@ -16,3 +16,5 @@ It's using:
 * View the file `/webpack.custom.js` to know more about the local web server and change the port for your reasons.
 * Run `npm start` to start the local web server at `http://localhost:3030`.
 * Run `npm run build` to build the app to the production.
+
+[![Browserstack](./src/images/Browserstack-logo.svg)](https://www.browserstack.com)
