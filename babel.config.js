@@ -14,7 +14,8 @@ module.exports = function (api) {
     const plugins = [
         "@babel/plugin-proposal-class-properties",
         "@babel/plugin-syntax-dynamic-import",
-        "react-html-attrs"
+        "react-html-attrs",
+        "react-hot-loader/babel"
     ];
 
     return {

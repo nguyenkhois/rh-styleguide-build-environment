@@ -1,3 +1,4 @@
+import { hot } from 'react-hot-loader/root';
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -19,11 +20,11 @@ const Header = () => (
         <div>
             <h1>Styleguide test environment</h1>
             <Link to="/" title="Go to the homepage">
-                <img src="/images/icon-home.png" className="app__header-icon" alt=""/>
+                <img src="/images/icon-home.png" className="app__header-icon" alt="" />
             </Link>
 
-            <a href="https://github.com/nguyenkhois/rh-styleguide-build-environment" title="View code on GitHub" 
-                target="_blank" rel="noopener noreferrer"><img src="/images/github-logo.png" alt=""/></a>
+            <a href="https://github.com/nguyenkhois/rh-styleguide-build-environment" title="View code on GitHub"
+                target="_blank" rel="noopener noreferrer"><img src="/images/github-logo.png" alt="" /></a>
         </div>
 
         <nav className="app__header__menu">
@@ -70,4 +71,4 @@ function App() {
     );
 }
 
-export default App;
+export default hot(App);
