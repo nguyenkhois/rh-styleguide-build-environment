@@ -5,5 +5,7 @@ module.exports = {
     },
     htmlTemplate: './src/index.html',
     distDir: './dist', // Distribution directory
-    port: 3030
-}
+    host: 'localhost',
+    serverPort: 3000, // Local Webpack Dev Server port (main)
+    bsPort: 3030 // BrowserSync port (only for using BrowserSync)
+};
