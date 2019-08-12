@@ -2,8 +2,10 @@
     &__header {
         margin: 1em;
 
-        h1 {
+        &-title {
             color: #135c86;
+            font-size: 1.5em;
+            font-weight: bold;
         }
 
         &-icon {

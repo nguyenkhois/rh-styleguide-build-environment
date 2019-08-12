@@ -1,23 +1,17 @@
 import React, { useEffect } from 'react';
-import * as Handlebars from '../../helpers/handlebars.min.js';
-import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
-import ScreenInfo from '../ScreenInfo/ScreenInfo';
+import { ErrorBoundary, ScreenInfo } from '../../helpers/';
 
-/* Component including */
-import './_image-hero.scss';
-import { context } from './image-hero.config.json';
-import hbsSource from './image-hero.hbs';
+/* Component definitions */
+const componentName = "image-hero";
 
-const placeholderClassName = "rh-image-hero__container--extend";
-const componentClassName = "rh-image-hero";
+require(`./_${componentName}.scss`);
+const { context } = require(`./${componentName}.config.json`);
+const hbsTemplate = require(`./${componentName}.hbs`);
 
-/* Testing */
-//import './test/image-block.css';
-/* End of testing */
+const placeholderClassName = `rh-${componentName}__container--extend`;
+const componentClassName = `rh-${componentName}`;
 
 export default function ImageHero() {
-    const hbsTemplate = Handlebars.compile(hbsSource);
-
     useEffect(() => { }, []);
 
     return (
@@ -28,7 +22,7 @@ export default function ImageHero() {
                     componentClassName={componentClassName}
                 />
             </ErrorBoundary>
-            
+
             <div className={placeholderClassName} dangerouslySetInnerHTML={{ __html: hbsTemplate(context) }} />
         </React.Fragment>
     );

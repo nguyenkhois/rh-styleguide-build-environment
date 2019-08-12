@@ -28,6 +28,7 @@
         "no-console": "off",
         "no-case-declarations": "off",
         "no-undef": "off",
+        "react/prop-types": "off",
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn"
     },

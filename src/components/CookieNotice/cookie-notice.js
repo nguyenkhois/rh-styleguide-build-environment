@@ -1,16 +1,29 @@
-import React, { Component } from 'react';
-import * as Handlebars from '../../helpers/handlebars.min.js';
+import React, { useEffect } from 'react';
+import { ErrorBoundary, ScreenInfo } from '../../helpers/';
 
-/* Component including */
-import './cookie-notice.scss';
-import { context } from './cookie-notice.config.json';
-import hbsSource from './cookie-notice.hbs';
-const hbsTemplate = Handlebars.compile(hbsSource);
+/* Component definitions */
+const componentName = "cookie-notice";
 
-export default function CookieNotice () {
+require(`./_${componentName}.scss`);
+const { context } = require(`./${componentName}.config.json`);
+const hbsTemplate = require(`./${componentName}.hbs`);
+
+const placeholderClassName = `rh-${componentName}__container--extend`;
+const componentClassName = `rh-${componentName}`;
+
+export default function CookieNotice() {
+    useEffect(() => { }, []);
+
     return (
         <React.Fragment>
-            <span dangerouslySetInnerHTML={{ __html: hbsTemplate(context) }} />
+            <ErrorBoundary>
+                <ScreenInfo
+                    placeholderClassName={placeholderClassName}
+                    componentClassName={componentClassName}
+                />
+            </ErrorBoundary>
+
+            <div className={placeholderClassName} dangerouslySetInnerHTML={{ __html: hbsTemplate(context) }} />
         </React.Fragment>
     );
 }

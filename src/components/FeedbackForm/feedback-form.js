@@ -1,23 +1,17 @@
 import React, { useEffect } from 'react';
-import * as Handlebars from '../../helpers/handlebars.min.js';
-import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
-import ScreenInfo from '../ScreenInfo/ScreenInfo';
+import { ErrorBoundary, ScreenInfo } from '../../helpers/';
 
-/* Component including */
-import './_feedback-form.scss';
-import { context } from './feedback-form.config.json';
-import hbsSource from './feedback-form.hbs';
+/* Component definitions */
+const componentName = "feedback-form";
 
-const placeholderClassName = "rh-feedback-form__container--extend";
-const componentClassName = "rh-feedback-form";
+require(`./_${componentName}.scss`);
+const { context } = require(`./${componentName}.config.json`);
+const hbsTemplate = require(`./${componentName}.hbs`);
 
-/* Testing */
-import './test/feedback-form.css';
-/* End of testing */
+const placeholderClassName = `rh-${componentName}__container--extend`;
+const componentClassName = `rh-${componentName}`;
 
 export default function FeedbackForm() {
-    const hbsTemplate = Handlebars.compile(hbsSource);
-
     useEffect(() => { }, []);
 
     return (
@@ -28,7 +22,7 @@ export default function FeedbackForm() {
                     componentClassName={componentClassName}
                 />
             </ErrorBoundary>
-            
+
             <div className={placeholderClassName} dangerouslySetInnerHTML={{ __html: hbsTemplate(context) }} />
         </React.Fragment>
     );
