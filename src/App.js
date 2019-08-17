@@ -1,6 +1,7 @@
 import { hot } from 'react-hot-loader/root';
-import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { ErrorBoundary } from './helpers/';
 
 import './styles/app.scss';
 
@@ -8,11 +9,11 @@ import './styles/styleguide/stilguide.css';
 //import './styles/styleguide/main.css';
 
 /* Components */
-import CookieNotice from './components/CookieNotice/cookie-notice';
-import EventCalendarBlock from './components/EventCalendarBlock/event-calendar-block';
-import FeedbackForm from './components/FeedbackForm/feedback-form';
-import ImageBlock from './components/ImageBlock/image-block';
-import ImageHero from './components/ImageHero/image-hero';
+const CookieNotice = lazy(() => import('./components/CookieNotice/cookie-notice'));
+const EventCalendarBlock = lazy(() => import('./components/EventCalendarBlock/event-calendar-block'));
+const FeedbackForm = lazy(() => import('./components/FeedbackForm/feedback-form'));
+const ImageBlock = lazy(() => import('./components/ImageBlock/image-block'));
+const ImageHero = lazy(() => import('./components/ImageHero/image-hero'));
 
 const Header = () => (
     <section className="app__header">
@@ -50,15 +51,21 @@ const Header = () => (
 
 function App() {
     return (
-        <Router>
-            <Header />
+        <Suspense fallback={<div>Loading...</div>}>
+            <Router>
+                <Header />
 
-            <Route path="/cookienotice/" component={CookieNotice} />
-            <Route path="/eventcalendarblock/" component={EventCalendarBlock} />
-            <Route path="/feedbackform/" component={FeedbackForm} />
-            <Route path="/imageblock/" component={ImageBlock} />
-            <Route path="/imagehero/" component={ImageHero} />
-        </Router>
+                <ErrorBoundary>
+                    <Switch>
+                        <Route path="/cookienotice/" component={CookieNotice} />
+                        <Route path="/eventcalendarblock/" component={EventCalendarBlock} />
+                        <Route path="/feedbackform/" component={FeedbackForm} />
+                        <Route path="/imageblock/" component={ImageBlock} />
+                        <Route path="/imagehero/" component={ImageHero} />
+                    </Switch>
+                </ErrorBoundary>
+            </Router>
+        </Suspense>
     );
 }
 

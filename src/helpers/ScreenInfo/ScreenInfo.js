@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { ScreenService } from '../../services/';
 
 export default function ScreenInfo(props) {
-    const placeholderClassName = props.placeholderClassName,
-        componentClassName = props.componentClassName;
 
     const [viewportWidth, setViewportWidth] = useState(0),
         [viewportHeight, setViewportHeight] = useState(0);
@@ -14,6 +12,7 @@ export default function ScreenInfo(props) {
     const [componentWidth, setComponentWidth] = useState(0),
         [componentHeight, setComponentHeight] = useState(0);
 
+    const { placeholderClassName, componentClassName } = props;
     const rootFontSizeInPx = ScreenService.elementFontSize('html');
 
     useEffect(() => {
@@ -50,7 +49,7 @@ export default function ScreenInfo(props) {
 
         return () => {
             window.removeEventListener("resize", getScreenInfo);
-        }
+        };
     }, []);
 
     return (
