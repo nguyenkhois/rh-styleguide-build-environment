@@ -6,9 +6,9 @@ const { serverPort, distDir } = require('./webpack.custom');
 
 module.exports = merge(common, {
     mode: 'development',
-    devtool: 'inline-source-map',
+    devtool: 'eval',
     devServer: {
-        contentBase: path.resolve(__dirname, distDir), // the root for the server
+        contentBase: path.join(__dirname, distDir), // the root for the server
         watchContentBase: true, // so we reload if other stuff like CSS changes
         port: serverPort,
         watchOptions: {
