@@ -53,6 +53,14 @@
             @include large {
                 font-size: $image-block-extend__text--font-size-large;
             }
+
+            &--center {
+                text-align: center;
+            }
+
+            &--right {
+                text-align: right;
+            }
         }
 
         /* Caption's position */
