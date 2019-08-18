@@ -1,6 +1,8 @@
 import { hot } from 'react-hot-loader/root';
-import React, { Suspense, lazy } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import NProgress from 'nprogress';
+import './styles/nprogress.css';
 import { ErrorBoundary, ScreenInfo } from './helpers/';
 
 import './styles/app.scss';
@@ -50,6 +52,12 @@ const Header = () => (
 );
 
 function App() {
+    NProgress.start();
+
+    useEffect(() => {
+        NProgress.done();
+    }, []);
+
     return (
         <Router>
             <Header />
