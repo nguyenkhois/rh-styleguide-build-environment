@@ -24,9 +24,8 @@
     }
 }
 
-
 /* Extend classes for using caption-mini component */
-.rh-image-block-extend {
+.rh-image-block {
     &__caption {
         /* Visuellt */
         background-color: $image-block-extend__caption--background-color;
@@ -63,7 +62,6 @@
         }
     }
 }
-
 
 // Using for testing
 .rh-image-block__space-extend {
