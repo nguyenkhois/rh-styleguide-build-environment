@@ -27,10 +27,12 @@
     }
 
     &__detail-info {
-        margin: 2em 1em;
+        margin: 1em;
+        max-width: 18em;
 
         &__title {
             font-weight: bold;
+            cursor: pointer;
         }
 
         &__container {
