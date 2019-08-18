@@ -19,7 +19,7 @@
         min-height: $image-block__image--min-height;
         max-height: $image-block__image--max-height;
         width: $image-block__image--width;
-        
+
         display: block;
     }
 }
@@ -66,10 +66,10 @@
 
 
 // Using for testing
-.rh-image-block__space--extend {
+.rh-image-block__space-extend {
     margin: .5em;
 }
-.rh-image-block__container--extend {
+.app__image-block__placeholder {
     width: 100%;
     min-width: 18em;
     max-width: 90em; //1440px

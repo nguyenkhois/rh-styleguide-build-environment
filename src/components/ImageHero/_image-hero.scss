@@ -43,6 +43,10 @@
 }
 
 // Extend CSS class for using caption component
+.app__image-hero__placeholder {
+    width: 100%;
+}
+
 .rh-hero-extend {
     &__caption {
         background-color: #f0f0f0;

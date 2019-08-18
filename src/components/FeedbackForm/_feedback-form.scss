@@ -102,7 +102,12 @@
 }
 
 // Extend
-.rh-feedback-form__body__button-send--extend {
+.app__feedback-form__placeholder {
+    width: 100%;
+    padding: 0 .5em;
+}
+
+.rh-feedback-form__body__button-send-extend {
 
     /* Box-modell/beteende */
     @if $feedback-form__body__button-send--margin {
@@ -136,8 +141,4 @@
     @if $feedback-form__body__button-send--cursor {
         cursor: $feedback-form__body__button-send--cursor;
     }
-}
-.rh-feedback-form__container--extend {
-    width: 100%;
-    padding: 0 .5em;
 }

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ErrorBoundary, ScreenInfo } from '../../helpers/';
+import { ErrorBoundary, ComponentInfo } from '../../helpers/';
 
 /* Component definitions */
 const componentName = "image-hero";
@@ -8,8 +8,9 @@ require(`./_${componentName}.scss`);
 const { context } = require(`./${componentName}.config.json`);
 const hbsTemplate = require(`./${componentName}.hbs`);
 
-const placeholderClassName = `rh-${componentName}__container--extend`;
-const componentClassName = `rh-${componentName}`;
+const placeholderClassName = `app__${componentName}__placeholder`;
+//const componentClassName = `rh-${componentName}`;
+const componentClassName = `rh-hero`; // Special case
 
 export default function ImageHero() {
     useEffect(() => { }, []);
@@ -17,7 +18,7 @@ export default function ImageHero() {
     return (
         <React.Fragment>
             <ErrorBoundary>
-                <ScreenInfo
+                <ComponentInfo
                     placeholderClassName={placeholderClassName}
                     componentClassName={componentClassName}
                 />

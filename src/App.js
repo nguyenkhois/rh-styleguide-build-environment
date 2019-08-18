@@ -1,7 +1,7 @@
 import { hot } from 'react-hot-loader/root';
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import { ErrorBoundary } from './helpers/';
+import { ErrorBoundary, ScreenInfo } from './helpers/';
 
 import './styles/app.scss';
 
@@ -51,10 +51,11 @@ const Header = () => (
 
 function App() {
     return (
-        <Suspense fallback={<div>Loading...</div>}>
-            <Router>
-                <Header />
+        <Router>
+            <Header />
 
+            <ScreenInfo />
+            <Suspense fallback={<div>Loading...</div>}>
                 <ErrorBoundary>
                     <Switch>
                         <Route path="/cookienotice/" component={CookieNotice} />
@@ -64,8 +65,8 @@ function App() {
                         <Route path="/imagehero/" component={ImageHero} />
                     </Switch>
                 </ErrorBoundary>
-            </Router>
-        </Suspense>
+            </Suspense>
+        </Router>
     );
 }
 

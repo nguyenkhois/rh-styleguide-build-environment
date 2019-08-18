@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ErrorBoundary, ScreenInfo } from '../../helpers/';
+import { ErrorBoundary, ComponentInfo } from '../../helpers/';
 
 /* Component definitions */
 const componentName = "event-calendar-block";
@@ -8,7 +8,7 @@ require(`./_${componentName}.scss`);
 const { context } = require(`./${componentName}.config.json`);
 const hbsTemplate = require(`./${componentName}.hbs`);
 
-const placeholderClassName = `rh-${componentName}__container--extend`;
+const placeholderClassName = `app__${componentName}__placeholder`;
 const componentClassName = `rh-${componentName}`;
 
 export default function EventCalendarBlock() {
@@ -17,7 +17,7 @@ export default function EventCalendarBlock() {
     return (
         <React.Fragment>
             <ErrorBoundary>
-                <ScreenInfo
+                <ComponentInfo
                     placeholderClassName={placeholderClassName}
                     componentClassName={componentClassName}
                 />

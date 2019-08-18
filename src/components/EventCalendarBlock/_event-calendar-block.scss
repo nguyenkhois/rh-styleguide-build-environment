@@ -107,7 +107,7 @@
 }
 
 // Extend - Using for testing
-.rh-event-calendar-block__container--extend {
+.app__event-calendar-block__placeholder {
     width: 100%;
     min-width: 18em;
     max-width: 90em; //1440px
@@ -122,16 +122,16 @@
     justify-content: center;
 }
 
-.rh-event-calendar-block__space--extend {
+.rh-event-calendar-block__space-extend {
     margin: .5em;
 }
 
-.rh-event-calendar-block__caption--extend--right-bottom {
+.rh-event-calendar-block__caption-extend--right-bottom {
     right: 1em;
     bottom: 1em;
 }
 
-.rh-event-calendar-block__caption--extend--right-top {
+.rh-event-calendar-block__caption-extend--right-top {
     right: 1em;
     top: 1em;
     bottom: auto;
@@ -139,6 +139,6 @@
 }
 
 // Caption under image
-.rh-caption-mini-text--extend {
+.rh-caption-mini-text-extend {
     text-align: center;
 }
