@@ -1,7 +1,58 @@
 /* Needed component(s)
 @import '../../Atoms/caption-hero/caption-hero';
 */
+@import '../../styles/functions';
+@import '../../styles/settings-main';
 @import '../../styles/breakpoints';
+
+
+.rh-caption-hero{
+	/* Positionering */
+	position: absolute;
+	bottom: em(40);
+	left: em(16);
+
+	/* Box-modell/beteende */
+	max-width: 344px;
+	margin-right: em(15);
+	padding: em(15);
+
+	/* Visuellt */
+	background-color: $black;
+
+	/* Typografi */
+	color: $white;
+	font-size: $h2-medium;
+
+	&--secondary {
+		/* Visuellt */
+		background-color: $white;
+
+		/* Typografi */
+		color: $black;
+	}
+
+	&--rounded {
+		border-radius: 0.4ex;
+	}
+
+	@include medium {
+		/* Positionering */
+		bottom: em(16);
+		left: em(40);
+
+		/* Box-modell/beteende */
+		max-width: 530px;
+	}
+	@include large {
+		/* Positionering */
+		bottom: em(25);
+		left: em(60);
+
+		/* Typografi */
+		font-size: $h2-medium;
+	}
+}
 
 .rh-hero {
     /* Positionering */
@@ -48,9 +99,9 @@
     width: 100%;
 }
 
-.rh-hero-extend {
+.rh-hero {
     &__caption {
-        background-color: #f0f0f0;
-        color: #000000;
+        background-color: #f0f0f0 !important;
+        color: #000000 !important;
     }
 }
