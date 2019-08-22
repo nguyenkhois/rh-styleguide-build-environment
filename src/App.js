@@ -1,18 +1,17 @@
 import { hot } from 'react-hot-loader/root';
 import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import NProgress from 'nprogress';
-import './styles/nprogress.css';
 import { ErrorBoundary, ScreenInfo } from './helpers/';
 
 import './styles/app.scss';
 
 import './styles/styleguide/stilguide.css';
-//import './styles/styleguide/main.css';
+import './styles/main.scss';
 
 /* Components */
 const CookieNotice = lazy(() => import('./components/CookieNotice/cookie-notice'));
 const EventCalendarBlock = lazy(() => import('./components/EventCalendarBlock/event-calendar-block'));
+const EventCardCalendar = lazy(() => import('./components/EventCardCalendar/event-card-calendar'));
 const FeedbackForm = lazy(() => import('./components/FeedbackForm/feedback-form'));
 const ImageBlock = lazy(() => import('./components/ImageBlock/image-block'));
 const ImageHero = lazy(() => import('./components/ImageHero/image-hero'));
@@ -38,6 +37,9 @@ const Header = () => (
                     <Link to="/eventcalendarblock/">Event calendar block</Link>
                 </li>
                 <li>
+                    <Link to="/eventcardcalendar/">Event card calendar</Link>
+                </li>
+                <li>
                     <Link to="/feedbackform/">Feedback form (Vårdgivarwebben)</Link>
                 </li>
                 <li>
@@ -52,11 +54,7 @@ const Header = () => (
 );
 
 function App() {
-    NProgress.start();
-
-    useEffect(() => {
-        NProgress.done();
-    }, []);
+    useEffect(() => { }, []);
 
     return (
         <Router>
@@ -68,6 +66,7 @@ function App() {
                     <Switch>
                         <Route path="/cookienotice/" component={CookieNotice} />
                         <Route path="/eventcalendarblock/" component={EventCalendarBlock} />
+                        <Route path="/eventcardcalendar/" component={EventCardCalendar} />
                         <Route path="/feedbackform/" component={FeedbackForm} />
                         <Route path="/imageblock/" component={ImageBlock} />
                         <Route path="/imagehero/" component={ImageHero} />

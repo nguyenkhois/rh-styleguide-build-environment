@@ -2,17 +2,16 @@ import React, { useEffect } from 'react';
 import { ErrorBoundary, ComponentInfo } from '../../helpers/';
 
 /* Component definitions */
-const componentName = "image-hero";
+const componentName = "event-card-calendar";
 
-//require(`./_${componentName}.scss`); // Created in Styleguide that's why it's not needed
+require(`./_${componentName}.scss`);
 const { context } = require(`./${componentName}.config.json`);
 const hbsTemplate = require(`./${componentName}.hbs`);
 
 const placeholderClassName = `app__${componentName}__placeholder`;
-//const componentClassName = `rh-${componentName}`;
-const componentClassName = `rh-hero`; // Special case
+const componentClassName = `rh-${componentName}`;
 
-export default function ImageHero() {
+export default function EventCardCalendar() {
     useEffect(() => { }, []);
 
     return (
