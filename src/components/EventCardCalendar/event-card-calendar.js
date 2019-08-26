@@ -4,7 +4,6 @@ import { ErrorBoundary, ComponentInfo } from '../../helpers/';
 /* Component definitions */
 const componentName = "event-card-calendar";
 
-require(`./_${componentName}.scss`);
 const { context } = require(`./${componentName}.config.json`);
 const hbsTemplate = require(`./${componentName}.hbs`);
 

@@ -1,0 +1,107 @@
+.rh-navigation-card{
+    /* Box-modell/beteende */
+    //margin-bottom: em(45);
+    
+    //background-color: #417795;
+    max-width: 300px;
+    margin: auto;
+
+    min-height: 3.75em; //60px
+    border: 0.0625em solid $base3-dark;
+    border-radius: 0.375em; //6px
+    padding: 0.875em; //14px
+
+    &__title {
+        display: flex;
+        align-items: center;
+        
+        &-icon{
+            padding: 0.278em;
+
+            &:after {
+                //font-size: 1em; //16px
+                content: "\e829";
+            }
+        }
+
+        &-link {
+            //color: #ffffff;
+            font-size: 1.125em; //18px
+            font-weight: bold;
+            margin: 0 0 0 0.9375em; //15px
+        }
+    }
+
+
+
+	//@include medium { height: 6em; }
+	//@include large { height: 5em; }
+
+	.rh-navigation-card-title{
+
+		&-icon {
+			&:after {
+                /* Box-modell/beteende */
+				margin-right: 1ex;
+                padding: em(6);
+                
+                /* Visuellt */
+                background: $base3;
+				border-radius: 50%;
+                
+                /* Typografi */
+				color: white;
+				font-weight: normal;
+		    	font-family: "feather";
+                font-size: $p-small;
+                
+                /* Blandat/övrigt */
+                content: "\e829";
+                
+                /* Typografi */
+				@include medium { font-size: $p-medium;}
+				@include large { font-size: $p-large;}
+			}
+		}
+
+		&-link{
+            /* Box-modell/beteende */
+            display: inline-block;
+            
+            /* Typografi */
+		    font-size: inherit;
+		    text-decoration: none;
+            color: $color-primary;
+            line-height: 1em;
+
+            /* Blandat/övrigt */
+		    cursor: pointer;
+
+		    &:hover,
+		    &:active {
+                /* Typografi */
+		        text-decoration: underline;  
+		    }
+
+		    &:visited {
+                /* Typografi */
+		        color: $link-visited;
+		    }
+		}
+	}
+
+	.rh-navigation-card-description{
+        /* Box-modell/beteende */
+		max-width: 95%;
+        padding-top: 1ex;
+        
+        /* Typografi */
+		color: $grey-dark;
+	}
+}
+
+
+
+
+
+
