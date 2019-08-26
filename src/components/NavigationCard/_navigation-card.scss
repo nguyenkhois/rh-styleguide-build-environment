@@ -1,20 +1,24 @@
 .rh-navigation-card{
     /* Box-modell/beteende */
     //margin-bottom: em(45);
-    
-    //background-color: #417795;
-    max-width: 300px;
+
     margin: auto;
 
     min-height: 3.75em; //60px
+    width: 100%;
+    min-width: 10em; //TODO
+    //max-width: 90em;
+    //background-color: #417795;
+
     border: 0.0625em solid $base3-dark;
     border-radius: 0.375em; //6px
     padding: 0.875em; //14px
 
     &__title {
         display: flex;
-        align-items: center;
-        
+        align-items: flex-start;
+        overflow-wrap: break-word;
+
         &-icon{
             padding: 0.278em;
 
@@ -28,11 +32,13 @@
             //color: #ffffff;
             font-size: 1.125em; //18px
             font-weight: bold;
-            margin: 0 0 0 0.9375em; //15px
+            margin: 0.1em 0 0 0.7778em; //15px
+            line-height: 1.4em;
         }
     }
 
-
+    @include medium { height: initial; }
+	@include large { height: initial; }
 
 	//@include medium { height: 6em; }
 	//@include large { height: 5em; }
@@ -44,20 +50,20 @@
                 /* Box-modell/beteende */
 				margin-right: 1ex;
                 padding: em(6);
-                
+
                 /* Visuellt */
                 background: $base3;
 				border-radius: 50%;
-                
+
                 /* Typografi */
 				color: white;
 				font-weight: normal;
 		    	font-family: "feather";
                 font-size: $p-small;
-                
+
                 /* Blandat/övrigt */
                 content: "\e829";
-                
+
                 /* Typografi */
 				@include medium { font-size: $p-medium;}
 				@include large { font-size: $p-large;}
@@ -67,7 +73,7 @@
 		&-link{
             /* Box-modell/beteende */
             display: inline-block;
-            
+
             /* Typografi */
 		    font-size: inherit;
 		    text-decoration: none;
@@ -80,7 +86,7 @@
 		    &:hover,
 		    &:active {
                 /* Typografi */
-		        text-decoration: underline;  
+		        text-decoration: underline;
 		    }
 
 		    &:visited {
@@ -94,7 +100,7 @@
         /* Box-modell/beteende */
 		max-width: 95%;
         padding-top: 1ex;
-        
+
         /* Typografi */
 		color: $grey-dark;
 	}

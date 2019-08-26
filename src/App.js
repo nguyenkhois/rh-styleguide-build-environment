@@ -5,7 +5,7 @@ import { ErrorBoundary, ScreenInfo, Header } from './helpers/';
 
 import './styles/app.scss';
 
-import './styles/styleguide/stilguide.css';
+//import './styles/styleguide/stilguide.css';
 import './styles/components.scss';
 
 /* Components */
