@@ -60,10 +60,25 @@
 
 // Organism
 .rh-navigation-block-group {
-    padding: 0 2em;
+    padding: 1.1em .4em;
+    background-color: #005069;
+
+    // 2 columns
+    @include medium {
+        padding: 1.1em 1em;
+    }
+
+    // 3 columns
+    @include xlarge {
+        padding: 1.1em 4.2em; //30px - 80px
+    }
 
     &__item-container {
-        padding: .5em;
+        padding: .6em;
+
+        @include medium {
+            padding: .65em;
+        }
     }
 }
 
@@ -82,27 +97,39 @@
     flex-direction: column;
 
     justify-content: space-between;
-    padding: 0 1em;
+    padding: 1.1em 1em;
 
-    background-color: grey;
+    background-color: #005069;
 
     .rh-navigation-block {
-        margin: .5em 0;
+        margin: .6em 0;
     }
 
+    // 2 columns
     @include medium {
         flex-direction: row;
         flex-wrap: wrap;
+        //padding: 1.875em 3em; //30px - 70px
 
         .rh-navigation-block {
-            margin: .5em;
-            width: 47.8%;
+            margin: .6em;
+            width: 47.2%;
         }
     }
 
+    // 3 columns
     @include large {
         .rh-navigation-block {
-            width: 31.8%;
+            width: 31%;
+        }
+    }
+
+    @include xlarge {
+        padding: 1.1em 4.4em; //30px - 80px
+
+        .rh-navigation-block {
+            width: 31.4%;
         }
     }
 }
+
