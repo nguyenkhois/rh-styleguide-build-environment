@@ -2,9 +2,8 @@ import React, { useEffect } from 'react';
 import { ErrorBoundary, ComponentInfo } from '../../helpers/';
 
 /* Component definitions */
-const componentName = "navigation-card";
+const componentName = "navigation-block";
 
-//require(`./_${componentName}.scss`);
 const { context } = require(`./${componentName}.config.json`);
 const hbsTemplate = require(`./${componentName}.hbs`);
 

@@ -12,28 +12,28 @@
 @import '_flexbox.scss';
 @import '_type_scale.scss';
 
+/* Component's settings */
+@import '../components/CaptionMini/caption-mini.settings.scss';
+@import '../components/CookieNotice/cookie-notice.settings.scss';
+@import '../components/EventCalendarBlock/event-calendar-block.settings.scss';
+@import '../components/EventCardCalendar/event-card-calendar.settings.scss';
+@import '../components/FeedbackForm/feedback-form.settings.scss';
+@import '../components/ImageBlock/image-block.settings.scss';
+@import '../components/NavigationBlock/navigation-block.settings.scss';
+
+/* Custom settings for a website */
+@import './customize.scss';
+
+/* Atoms */
 @import '../components/RoundButton/round-button';
 @import '../components/Link/link';
-
-@import '../components/CaptionMini/caption-mini.settings.scss';
 @import '../components/CaptionMini/_caption-mini.scss';
 
-@import '../components/CookieNotice/cookie-notice.settings.scss';
+/* Molecules */
 @import '../components/CookieNotice/cookie-notice';
-
-@import '../components/EventCalendarBlock/event-calendar-block.settings.scss';
 @import '../components/EventCalendarBlock/event-calendar-block';
-
-@import '../components/EventCardCalendar/event-card-calendar.settings.scss';
 @import '../components/EventCardCalendar/event-card-calendar';
-
-@import '../components/FeedbackForm/feedback-form.settings.scss';
 @import '../components/FeedbackForm/feedback-form';
-
-@import '../components/ImageBlock/image-block.settings.scss';
 @import '../components/ImageBlock/image-block';
-
 @import '../components/ImageHero/image-hero';
-
-@import '../components/NavigationCard/navigation-card.settings.scss';
-@import '../components/NavigationCard/navigation-card';
+@import '../components/NavigationBlock/navigation-block';

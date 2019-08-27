@@ -1,0 +1,68 @@
+.rh-navigation-block {
+    /* Box-modell/beteende */
+    min-height: 3.75em; //60px
+    width: 100%;
+
+    //min-width: 10em; //TODO
+    background-color: #417795;
+
+    border: 0.0625em solid #417795;
+    border-radius: 0.375em; //6px
+    padding: 0.875em; //14px
+
+    &__button {
+        font-size: 1em;
+        height: 1.875em;//30px
+        width: 1.875em;//30px
+        padding: 0.4em;
+
+        &:hover,
+        &:active {
+            background-color: #D0E3F3;
+            color: #000000;
+        }
+
+        &-icon {
+            &:after {
+                content: "\e829";
+            }
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: flex-start;
+        overflow-wrap: break-word;
+
+
+
+        &-link {
+            color: #ffffff;
+            font-size: 1.125em; //18px
+            font-weight: bold;
+            margin: 0.19em 0 0 0.7778em; //15px
+            line-height: 1.4em;
+
+            @include large {
+                font-size: 1.25em;
+            }
+        }
+    }
+
+    &__description {
+        margin: 0.5em 0 0 0; //8px
+
+        &-text {
+            color: #ffffff;
+        }
+    }
+}
+
+// Organism
+.rh-navigation-block-group {
+    padding: 0 1em;
+
+    &__item {
+        padding: .5em;
+    }
+}

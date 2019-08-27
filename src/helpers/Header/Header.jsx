@@ -37,7 +37,7 @@ function Header() {
                     <Link to="/imagehero/">Image hero</Link>
                 </li>
                 <li>
-                    <Link to="/navigationcard/">Navigation card</Link>
+                    <Link to="/navigationblock/">Navigation block</Link>
                 </li>
             </ul>
         </nav>

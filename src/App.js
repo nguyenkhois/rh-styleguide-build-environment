@@ -15,7 +15,7 @@ const EventCardCalendar = lazy(() => import('./components/EventCardCalendar/even
 const FeedbackForm = lazy(() => import('./components/FeedbackForm/feedback-form'));
 const ImageBlock = lazy(() => import('./components/ImageBlock/image-block'));
 const ImageHero = lazy(() => import('./components/ImageHero/image-hero'));
-const NavigationCard = lazy(() => import('./components/NavigationCard/navigation-card'));
+const NavigationBlock = lazy(() => import('./components/NavigationBlock/navigation-block'));
 
 function App() {
     useEffect(() => { }, []);
@@ -34,7 +34,7 @@ function App() {
                         <Route path="/feedbackform/" component={FeedbackForm} />
                         <Route path="/imageblock/" component={ImageBlock} />
                         <Route path="/imagehero/" component={ImageHero} />
-                        <Route path="/navigationcard/" component={NavigationCard} />
+                        <Route path="/navigationblock/" component={NavigationBlock} />
                     </Switch>
                 </ErrorBoundary>
             </Suspense>

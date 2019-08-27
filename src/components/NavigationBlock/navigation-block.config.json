@@ -1,6 +1,7 @@
 {
-	"title": "Sekundär navigering",
+	"title": "Navigation block",
     "status": "wip",
+    "version": "1.0.0",
 	"context": {
         "link": {
             "title": "Förklara vart länken leder",
