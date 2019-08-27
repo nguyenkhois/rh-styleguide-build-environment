@@ -305,3 +305,18 @@
       width: 100%;
     }
 }
+
+
+.rh-row {
+    margin-right: -15px;
+    margin-left: -15px;
+    
+    &:before{
+        display: table;
+        content: " ";
+    }
+
+    &:after {
+        clear:both;
+    }
+}

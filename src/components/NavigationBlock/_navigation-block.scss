@@ -1,7 +1,6 @@
 .rh-navigation-block {
     /* Box-modell/beteende */
     min-height: 3.75em; //60px
-    width: 100%;
 
     //min-width: 10em; //TODO
     background-color: #417795;
@@ -12,8 +11,8 @@
 
     &__button {
         font-size: 1em;
-        height: 1.875em;//30px
-        width: 1.875em;//30px
+        height: 1.875em; //30px
+        width: 1.875em; //30px
         padding: 0.4em;
 
         &:hover,
@@ -40,11 +39,12 @@
             color: #ffffff;
             font-size: 1.125em; //18px
             font-weight: bold;
-            margin: 0.19em 0 0 0.7778em; //15px
+            margin: 0.15em 0 0 0.7778em; //15px
             line-height: 1.4em;
 
             @include large {
                 font-size: 1.25em;
+                margin: 0.05em 0 0 0.7778em; //15px
             }
         }
     }
@@ -60,9 +60,49 @@
 
 // Organism
 .rh-navigation-block-group {
+    padding: 0 2em;
+
+    &__item-container {
+        padding: .5em;
+    }
+}
+
+// Utility
+.rh-page__content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 90em;
+}
+
+
+// Using flex
+.rh-navigation-block__container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
     padding: 0 1em;
 
-    &__item {
-        padding: .5em;
+    background-color: grey;
+
+    .rh-navigation-block {
+        margin: .5em 0;
+    }
+
+    @include medium {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .rh-navigation-block {
+            margin: .5em;
+            width: 47.8%;
+        }
+    }
+
+    @include large {
+        .rh-navigation-block {
+            width: 31.8%;
+        }
     }
 }
