@@ -39,6 +39,9 @@ function Header() {
                 <li>
                     <Link to="/navigationblock/">Navigation block</Link>
                 </li>
+                <li>
+                    <Link to="/navigationleft/">Navigation left</Link>
+                </li>
             </ul>
         </nav>
     </section>

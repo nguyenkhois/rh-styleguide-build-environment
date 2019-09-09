@@ -16,6 +16,7 @@ const FeedbackForm = lazy(() => import('./components/FeedbackForm/feedback-form'
 const ImageBlock = lazy(() => import('./components/ImageBlock/image-block'));
 const ImageHero = lazy(() => import('./components/ImageHero/image-hero'));
 const NavigationBlock = lazy(() => import('./components/NavigationBlock/navigation-block'));
+const NavigationLeft = lazy(() => import('./components/NavigationLeft/navigation-left'));
 
 function App() {
     useEffect(() => { }, []);
@@ -35,6 +36,7 @@ function App() {
                         <Route path="/imageblock/" component={ImageBlock} />
                         <Route path="/imagehero/" component={ImageHero} />
                         <Route path="/navigationblock/" component={NavigationBlock} />
+                        <Route path="/navigationleft/" component={NavigationLeft} />
                     </Switch>
                 </ErrorBoundary>
             </Suspense>
