@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { ErrorBoundary, ComponentInfo } from '../../helpers/';
 
 /* Component definitions */
-const componentName = "image-block";
+const componentName = "navigation-block";
 
 const { context } = require(`./${componentName}.config.json`);
 const hbsTemplate = require(`./${componentName}.hbs`);
@@ -10,7 +10,7 @@ const hbsTemplate = require(`./${componentName}.hbs`);
 const placeholderClassName = `app__${componentName}__placeholder`;
 const componentClassName = `rh-${componentName}`;
 
-export default function ImageBlock() {
+export default function NavigationCard() {
     useEffect(() => { }, []);
 
     return (

@@ -1,12 +1,8 @@
-@import '../../styles/_breakpoints.scss';
-
-@import './event-card-calendar.settings.scss';
-
 .rh-event-card-calendar {
     /* Box-modell/beteende */
     display: flex;
     flex-direction: column;
-  
+
     width: $event-card-calendar--width;
     min-width: $event-card-calendar--min-width;
     max-width: $event-card-calendar--max-width;

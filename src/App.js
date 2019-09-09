@@ -1,12 +1,12 @@
 import { hot } from 'react-hot-loader/root';
 import React, { useEffect, Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import { ErrorBoundary, ScreenInfo } from './helpers/';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { ErrorBoundary, ScreenInfo, Header } from './helpers/';
 
 import './styles/app.scss';
 
 import './styles/styleguide/stilguide.css';
-import './styles/main.scss';
+import './styles/components.scss';
 
 /* Components */
 const CookieNotice = lazy(() => import('./components/CookieNotice/cookie-notice'));
@@ -15,43 +15,7 @@ const EventCardCalendar = lazy(() => import('./components/EventCardCalendar/even
 const FeedbackForm = lazy(() => import('./components/FeedbackForm/feedback-form'));
 const ImageBlock = lazy(() => import('./components/ImageBlock/image-block'));
 const ImageHero = lazy(() => import('./components/ImageHero/image-hero'));
-
-const Header = () => (
-    <section className="app__header">
-        <div>
-            <p className="app__header-title">Styleguide development</p>
-            <Link to="/" title="Go to the homepage">
-                <img src="/images/icon-home.png" className="app__header-icon" alt="" />
-            </Link>
-
-            <a href="https://github.com/nguyenkhois/rh-styleguide-build-environment" title="View code on GitHub"
-                target="_blank" rel="noopener noreferrer"><img src="/images/github-logo.png" alt="" /></a>
-        </div>
-
-        <nav className="app__header__menu">
-            <ul>
-                <li>
-                    <Link to="/cookienotice/">Cookie notice</Link>
-                </li>
-                <li>
-                    <Link to="/eventcalendarblock/">Event calendar block</Link>
-                </li>
-                <li>
-                    <Link to="/eventcardcalendar/">Event card calendar</Link>
-                </li>
-                <li>
-                    <Link to="/feedbackform/">Feedback form (Vårdgivarwebben)</Link>
-                </li>
-                <li>
-                    <Link to="/imageblock/">Image block</Link>
-                </li>
-                <li>
-                    <Link to="/imagehero/">Image hero</Link>
-                </li>
-            </ul>
-        </nav>
-    </section>
-);
+const NavigationBlock = lazy(() => import('./components/NavigationBlock/navigation-block'));
 
 function App() {
     useEffect(() => { }, []);
@@ -70,6 +34,7 @@ function App() {
                         <Route path="/feedbackform/" component={FeedbackForm} />
                         <Route path="/imageblock/" component={ImageBlock} />
                         <Route path="/imagehero/" component={ImageHero} />
+                        <Route path="/navigationblock/" component={NavigationBlock} />
                     </Switch>
                 </ErrorBoundary>
             </Suspense>
