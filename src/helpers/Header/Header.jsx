@@ -19,25 +19,13 @@ function Header() {
         <nav className="app__header__menu">
             <ul>
                 <li>
-                    <Link to="/cookienotice/">Cookie notice</Link>
-                </li>
-                <li>
                     <Link to="/eventcalendarblock/">Event calendar block</Link>
                 </li>
                 <li>
                     <Link to="/eventcardcalendar/">Event card calendar</Link>
                 </li>
                 <li>
-                    <Link to="/feedbackform/">Feedback form (Vårdgivarwebben)</Link>
-                </li>
-                <li>
                     <Link to="/imageblock/">Image block</Link>
-                </li>
-                <li>
-                    <Link to="/imagehero/">Image hero</Link>
-                </li>
-                <li>
-                    <Link to="/navigationblock/">Navigation block</Link>
                 </li>
             </ul>
         </nav>

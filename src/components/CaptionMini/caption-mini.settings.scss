@@ -19,7 +19,12 @@ $caption-mini--triangle--border-left: 0 solid #000000;
 $caption-mini--square--padding: auto;
 $caption-mini--square--width: auto;
 $caption-mini--square--background-color: #000000;
-$caption-mini--square--border-radius: 0 0 0 0;
+
+// Using only for --round
+$caption-mini--round--padding: auto;
+$caption-mini--round--width: auto;
+$caption-mini--round--background-color: #000000;
+$caption-mini--round--border-radius: 0.25em;
 
 // Using only for --under-image
 $caption-mini--under-image--padding: auto;

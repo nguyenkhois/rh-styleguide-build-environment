@@ -15,7 +15,7 @@
     }
 
     // Använd en av dem åt gången (--has-triangle ELLER --square)
-    &--has-triangle {
+    &--triangle {
         /* Box modell/beteende */
         height: 0;
 
@@ -32,9 +32,15 @@
 
     &--square {
         background-color: $caption-mini--square--background-color;
-        border-radius: $caption-mini--square--border-radius;
         padding: $caption-mini--square--padding;
         width: $caption-mini--square--width;
+    }
+
+    &--round {
+        background-color: $caption-mini--round--background-color;
+        border-radius: $caption-mini--round--border-radius;
+        padding: $caption-mini--round--padding;
+        width: $caption-mini--round--width;
     }
 
     &--under-image {
@@ -44,6 +50,23 @@
         width: $caption-mini--under-image--width;
 
         position: static; // IE11 - Reset position
+    }
+
+    &--left-top {
+        top: 1em;
+        left: 1em;
+        bottom: auto;
+    }
+
+    &--right-top {
+        right: 1em;
+        top: 1em;
+        bottom: auto;
+    }
+
+    &--right-bottom {
+        right: 1em;
+        bottom: 1em;
     }
 
     &-text {

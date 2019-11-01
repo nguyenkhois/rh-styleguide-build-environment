@@ -7,12 +7,12 @@ function getViewportSize() {
 
 function getElementSizeByClassName(elementClassName) {
     if (!elementClassName) {
-        throw new Error('Missing the HTML element CSS class name');
+        throw new Error('Missing the input variable elementClassName');
     }
 
     const elem = document.getElementsByClassName(elementClassName);
     if (!elem.length) {
-        throw new Error(`The HTML element CSS class name '${elementClassName}' is not found`);
+        throw new Error(`The CSS class name '${elementClassName}' is not found`);
     }
 
     const width = elem[0].offsetWidth,
