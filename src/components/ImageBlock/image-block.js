@@ -7,7 +7,7 @@ const componentName = "image-block";
 const { context } = require(`./${componentName}.config.json`);
 const hbsTemplate = require(`./${componentName}.hbs`);
 
-const placeholderClassName = `app__${componentName}__placeholder`;
+const placeholderClassName = `rh-container--auto`;
 const componentClassName = `rh-${componentName}`;
 
 export default function ImageBlock() {
@@ -22,7 +22,7 @@ export default function ImageBlock() {
                 />
             </ErrorBoundary>
 
-            <div className={placeholderClassName} dangerouslySetInnerHTML={{ __html: hbsTemplate(context) }} />
+            <div dangerouslySetInnerHTML={{ __html: hbsTemplate(context) }} />
         </React.Fragment>
     );
 }

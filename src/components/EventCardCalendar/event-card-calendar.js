@@ -7,8 +7,8 @@ const componentName = "event-card-calendar";
 const { context } = require(`./${componentName}.config.json`);
 const hbsTemplate = require(`./${componentName}.hbs`);
 
-const placeholderClassName = `app__${componentName}__placeholder`;
-const componentClassName = `rh-${componentName}`;
+const placeholderClassName = `rh-container--auto`;
+const componentClassName = `rh-${componentName}__item`;
 
 export default function EventCardCalendar() {
     useEffect(() => { }, []);
@@ -22,7 +22,7 @@ export default function EventCardCalendar() {
                 />
             </ErrorBoundary>
 
-            <div className={placeholderClassName} dangerouslySetInnerHTML={{ __html: hbsTemplate(context) }} />
+            <div dangerouslySetInnerHTML={{ __html: hbsTemplate(context) }} />
         </React.Fragment>
     );
 }

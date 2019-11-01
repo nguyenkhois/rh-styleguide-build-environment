@@ -3,6 +3,112 @@
     "status": "prototype",
     "version": "0.0.0",
     "context": {
-        
+        "blocks": [
+            {
+                "day": "14",
+                "month": "mars",
+                "title": "Rum för Dans: Ett lager till",
+                "time": "18.30 - 20.00",
+                "place": "Kulturhuset Najaden, Fiskaregatan 21",
+                "tags": [
+                    {
+                        "name": "Kultur"
+                    },
+                    {
+                        "name": "Slöjd och Konsthantverk"
+                    },
+                    {
+                        "name": "Dans"
+                    },
+                    {
+                        "name": "Kulturevenemang"
+                    }
+                ]
+            },
+            {
+                "day": "1",
+                "month": "apr",
+                "title": "Kultur o.s.v. om finansiering av konstnärligt och kulturskapande arbete",
+                "time": "18.30 - 20.00",
+                "place": "Kulturhuset Najaden, Fiskaregatan 21",
+                "tags": [
+                    {
+                        "name": "Kultur"
+                    },
+                    {
+                        "name": "Dans"
+                    },
+                    {
+                        "name": "Bild- och formkonst"
+                    },
+                    {
+                        "name": "Film och rörlig bild"
+                    }
+                ]
+            },
+            {
+                "day": "5",
+                "month": "maj",
+                "title": "Songlines: Gitarrlektioner med Hadi Ali",
+                "time": "18.30 - 20.00",
+                "place": "Kulturhuset Najaden, Fiskaregatan 21",
+                "tags": [
+                    {
+                        "name": "Kultur och hälsa"
+                    },
+                    {
+                        "name": "Musik"
+                    },
+                    {
+                        "name": "Bibliotek"
+                    },
+                    {
+                        "name": "Litteratur och skrivande"
+                    }
+                ]
+            },
+            {
+                "day": "10",
+                "month": "aug",
+                "title": "Kultur o.s.v. om finansiering av konstnärligt",
+                "time": "18.30 - 20.00",
+                "place": "Kulturhuset Najaden, Fiskaregatan 21",
+                "tags": [
+                    {
+                        "name": "Kultur"
+                    },
+                    {
+                        "name": "Slöjd och Konsthantverk"
+                    },
+                    {
+                        "name": "Bibliotek"
+                    },
+                    {
+                        "name": "Kulturevenemang"
+                    }
+                ]
+            },
+            {
+                "day": "30",
+                "month": "dec",
+                "title": "Kulturskapande arbete",
+                "time": "18.30 - 20.00",
+                "place": "Kulturhuset Najaden, Fiskaregatan 21",
+                "tags": [
+                    {
+                        "name": "Kultur"
+                    },
+                    {
+                        "name": "Slöjd och Konsthantverk"
+                    },
+                    {
+                        "name": "Dans"
+                    },
+                    {
+                        "name": "Litteratur och skrivande"
+                    }
+                ]
+            }
+        ]
     }
 }

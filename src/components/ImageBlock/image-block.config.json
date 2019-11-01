@@ -2,43 +2,35 @@
     "title": "Image block",
     "status": "prototype",
     "version": "0.0.0",
-    "context": "",
-    "variants": [
-        {
-            "name":"default",
-            "status":"prototype",
-            "context": {
-                "heroImage": {
-                    "src": "/images/components/Molecules/event-calendar-block/event-calendar-block.png",
-                    "alt": ""
-                },
-                "caption": {
-                    "modifier": "--under-image",
-                    "extendClass": "rh-image-block-extend__caption",
-                    "text": {
-                        "content": "Copyright by someone",
-                        "extendClass": "rh-image-block-extend__caption__text"
-                    }
-                }
+    "context": {
+        "blocks": [
+            {
+                "image": "/images/event-calendar-block.png",
+                "text": "Copyright by Rogan",
+                "captionType": "rh-caption-mini--under-image"
+            },
+            {
+                "image": "/images/event-calendar-block.png",
+                "text": "Photo by Jonnas",
+                "captionType": "rh-caption-mini--under-image"
+            },
+            {
+                "image": "/images/event-calendar-block.png",
+                "text": "Date: 2019-10-02",
+                "captionType": "rh-caption-mini--under-image",
+                "captionTextAlign": "rh-image-block__caption-text--right"
+            },
+            {
+                "image": "/images/event-calendar-block.png",
+                "text": "Published by robot",
+                "captionType": "rh-caption-mini--square rh-caption-mini--right-bottom"
+            },
+            {
+                "image": "/images/event-calendar-block.png",
+                "text": "Designed by Marin",
+                "captionType": "rh-caption-mini--under-image",
+                "captionTextAlign": "rh-image-block__caption-text--center"
             }
-        },
-        {
-            "name":"over image",
-            "status":"prototype",
-            "context": {
-                "heroImage": {
-                    "src": "/images/components/Molecules/event-calendar-block/event-calendar-block.png",
-                    "alt": ""
-                },
-                "caption": {
-                    "modifier": "--square",
-                    "extendClass": "rh-image-block-extend__caption rh-image-block-extend__caption--over-image--right-bottom",
-                    "text": {
-                        "content": "Copyright by someone",
-                        "extendClass": "rh-image-block-extend__caption__text"
-                    }
-                }
-            }
-        }
-    ]
+        ]
+    }
 }
